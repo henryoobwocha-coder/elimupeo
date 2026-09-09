@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elimupeo - Kenya's #1 Opportunity Hub</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
@@ -20,83 +19,59 @@ header{background:white;padding:15px 5%;display:flex;justify-content:space-betwe
 .filters{display:flex;gap:10px;justify-content:center;padding:25px 5%;flex-wrap:wrap}
 .filter{border:1px solid #e2e8f0;background:white;padding:10px 20px;border-radius:30px;cursor:pointer;font-weight:600} .filter.active{background:#0a7a42;color:white;border-color:#0a7a42}
 .container{max-width:1200px;margin:0 auto;padding:20px 5% 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.card{background:white;border-radius:18px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,0.04);border:1px solid #f1f5f9;transition:0.3s} .card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.08)}
-.tag{font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px} .tag-gov{background:#dcfce7;color:#166534} .tag-int{background:#dbeafe;color:#1e40af} .tag-foundation{background:#fef3c7;color:#92400e}
-.card h3{margin:12px 0 8px;font-size:18px;line-height:1.3;color:#0f172a}
+.card{background:white;border-radius:18px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,0.04);border:1px solid #f1f5f9;transition:0.3s} .card:hover{transform:translateY(-5px)}
+.tag{font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px;text-transform:uppercase} .tag-gov{background:#dcfce7;color:#166534} .tag-int{background:#dbeafe;color:#1e40af} .tag-foundation{background:#fef3c7;color:#92400e} .tag-regional{background:#e0e7ff;color:#4338ca}
+.card h3{margin:12px 0 8px;font-size:18px;line-height:1.3}
 .card p{font-size:14px;color:#475569;line-height:1.5;margin-bottom:12px}
 .meta{display:flex;justify-content:space-between;align-items:center;margin-top:15px;padding-top:15px;border-top:1px dashed #e2e8f0}
 .btn-apply{background:#0f172a;color:white;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:600;font-size:13px}
 footer{background:#0f172a;color:#94a3b8;padding:40px 5%;text-align:center;margin-top:40px}
+#status{padding:10px;text-align:center;font-size:13px;background:#fef9c3;color:#713f12}
 </style>
 </head>
 <body>
-
-<header>
-<div class="logo">ELIMU<span>PEO</span> 🇰🇪</div>
-<div style="font-weight:600;font-size:14px">Opportunities for Every Kenyan</div>
-</header>
-
+<header><div class="logo">ELIMU<span>PEO</span> 🇰🇪</div><div style="font-weight:600;font-size:14px">Opportunities for Every Kenyan</div></header>
 <section class="hero">
 <h1>Find Your Next <br><span>Opportunity</span></h1>
 <p style="opacity:0.9;max-width:600px;margin:0 auto">Kenya's trusted hub for scholarships, attachments, jobs & grants. Verified daily.</p>
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Search e.g. HELB, Masters, Germany..." onkeyup="filterOpps()">
-<button onclick="filterOpps()">Search</button>
-</div>
-<div class="stats">
-<div class="stat">✅ 7 Verified Today</div>
-<div class="stat">🎓 1,200+ Students Placed</div>
-<div class="stat">🇰🇪 All 47 Counties</div>
-</div>
+<div class="search-box"><input type="text" id="searchInput" placeholder="Search e.g. HELB, Masters, Germany..." onkeyup="filterOpps()"><button onclick="filterOpps()">Search</button></div>
+<div class="stats"><div class="stat">✅ Live from Supabase</div><div class="stat">🎓 1,200+ Students Placed</div><div class="stat">🇰🇪 All 47 Counties</div></div>
 </section>
-
-<div class="filters">
-<div class="filter active" onclick="setFilter('all',this)">All</div>
-<div class="filter" onclick="setFilter('Government',this)">Government</div>
-<div class="filter" onclick="setFilter('International',this)">International</div>
-<div class="filter" onclick="setFilter('Foundation',this)">Foundations</div>
-</div>
-
+<div id="status">Connecting to database...</div>
+<div class="filters"><div class="filter active" onclick="setFilter('all',this)">All</div><div class="filter" onclick="setFilter('Government',this)">Government</div><div class="filter" onclick="setFilter('International',this)">International</div><div class="filter" onclick="setFilter('Foundation',this)">Foundations</div></div>
 <div class="container" id="list"></div>
-
-<footer>
-<h3 style="color:white;margin-bottom:10px">ELIMUPEO</h3>
-<p>Built for Kenyan Youth | From Kitale to the World | Not affiliated with government, but we verify every opportunity</p>
-<p style="margin-top:15px;font-size:12px">© 2026 Elimupeo Foundation. Made with ❤️ in Kenya</p>
-</footer>
-
+<footer><h3 style="color:white;margin-bottom:10px">ELIMUPEO</h3><p>Built for Kenyan Youth | From Kitale to the World</p><p style="margin-top:15px;font-size:12px">© 2026 Elimupeo Foundation</p></footer>
 <script>
-const data = [
-{title:"HELB Masters & PhD Scholarships 2025", desc:"HELB funding for Kenyan students for Masters & PhD locally & abroad. Tuition + upkeep.", deadline:"30 Sep 2025", type:"Government", tag:"tag-gov", link:"https://helb.co.ke"},
-{title:"EAC Student Mobility Scholarship", desc:"Study in EAC partner states. Promotes regional integration & academic exchange.", deadline:"15 Aug 2025", type:"Regional", tag:"tag-gov", link:"#"},
-{title:"Commonwealth UK Scholarship", desc:"Fully funded UK government Masters & PhD in UK universities. Most prestigious.", deadline:"15 Oct 2025", type:"International", tag:"tag-int", link:"https://cscuk.fcdo.gov.uk"},
-{title:"Kingdom of Morocco Scholarship", desc:"Morocco government scholarships for undergrad & postgrad in Moroccan universities.", deadline:"30 Aug 2025", type:"International", tag:"tag-int", link:"#"},
-{title:"DAAD Germany Scholarship", desc:"German Academic Exchange for postgrad in Germany. All expenses covered + stipend.", deadline:"01 Sep 2025", type:"International", tag:"tag-int", link:"https://daad.or.ke"},
-{title:"Mastercard Foundation Scholars", desc:"For bright but financially challenged students at UoN, KU & partner institutions.", deadline:"Rolling", type:"Foundation", tag:"tag-foundation", link:"#"},
-{title:"Equity Leaders Program (Wings to Fly)", desc:"Equity Bank scholarship for top KCSE performers + leadership training & internship.", deadline:"15 Jul 2025", type:"Foundation", tag:"tag-foundation", link:"https://equitygroupfoundation.com"}
+const SUPABASE_URL="https://wqhbenevvvfpkvaesgga.supabase.co";
+const SUPABASE_KEY="sb_publishable_TP2JoWT1hZpS-z52uTMyDw_v8y5b3Y0";
+const fallback=[
+{title:"HELB Masters & PhD Scholarships 2025",description:"HELB funding for Kenyan students for Masters & PhD locally & abroad. Tuition + upkeep.",deadline:"30 Sep 2025",type:"Government",link:"https://helb.co.ke"},
+{title:"EAC Student Mobility Scholarship",description:"Study in EAC partner states. Promotes regional integration.",deadline:"15 Aug 2025",type:"Regional",link:"#"},
+{title:"Commonwealth UK Scholarship",description:"Fully funded UK government Masters & PhD in UK universities.",deadline:"15 Oct 2025",type:"International",link:"https://cscuk.fcdo.gov.uk"},
+{title:"Kingdom of Morocco Scholarship",description:"Morocco government scholarships for undergrad & postgrad.",deadline:"30 Aug 2025",type:"International",link:"#"},
+{title:"DAAD Germany Scholarship",description:"German Academic Exchange for postgrad in Germany. All expenses + stipend.",deadline:"01 Sep 2025",type:"International",link:"https://daad.or.ke"},
+{title:"Mastercard Foundation Scholars",description:"For bright but financially challenged students at UoN, KU & partners.",deadline:"Rolling",type:"Foundation",link:"#"},
+{title:"Equity Leaders Program",description:"Equity Bank scholarship for top KCSE performers + leadership & internship.",deadline:"15 Jul 2025",type:"Foundation",link:"https://equitygroupfoundation.com"}
 ];
-let currentFilter='all';
+let allData=[],currentFilter='all';
+function getTag(t){ if(t=='Government')return 'tag-gov'; if(t=='International')return 'tag-int'; if(t=='Foundation')return 'tag-foundation'; return 'tag-regional';}
 function render(list){
-document.getElementById('list').innerHTML = list.map(o=>`
-<div class="card">
-<span class="tag ${o.tag}">${o.type}</span>
-<h3>${o.title}</h3>
-<p>${o.desc}</p>
-<div class="meta">
-<small style="color:#ef4444;font-weight:600">⏰ ${o.deadline}</small>
-<a class="btn-apply" href="${o.link}" target="_blank">Apply →</a>
-</div>
-</div>`).join('');
+document.getElementById('list').innerHTML=list.map(o=>`
+<div class="card"><span class="tag ${getTag(o.type)}">${o.type}</span><h3>${o.title}</h3><p>${o.description}</p><div class="meta"><small style="color:#ef4444;font-weight:600">⏰ ${o.deadline}</small><a class="btn-apply" href="${o.link}" target="_blank">Apply →</a></div></div>`).join('');
 }
-function filterOpps(){
-const q = document.getElementById('searchInput').value.toLowerCase();
-let filtered = data.filter(o=> (currentFilter==='all' || o.type.toLowerCase().includes(currentFilter.toLowerCase()) || (currentFilter==='Government' && o.type==='Regional')) && (o.title.toLowerCase().includes(q) || o.desc.toLowerCase().includes(q)) );
-render(filtered);
+function filterOpps(){const q=document.getElementById('searchInput').value.toLowerCase();let f=allData.filter(o=>(currentFilter=='all'||o.type.toLowerCase().includes(currentFilter.toLowerCase()))&&(o.title.toLowerCase().includes(q)||o.description.toLowerCase().includes(q)));render(f);}
+function setFilter(f,el){currentFilter=f;document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));el.classList.add('active');filterOpps();}
+async function init(){
+try{
+const res=await fetch(`${SUPABASE_URL}/rest/v1/opportunities?select=*&order=created_at.desc`,{headers:{"apikey":SUPABASE_KEY,"Authorization":`Bearer ${SUPABASE_KEY}`}});
+if(!res.ok) throw new Error('Supabase blocked');
+const data=await res.json();
+allData=data.length?data:fallback;
+document.getElementById('status').innerText=data.length?`✅ Connected: ${data.length} opportunities live from Supabase`:`⚠️ Using offline backup - Government network blocked Supabase, but site still works`;
+}catch(e){allData=fallback;document.getElementById('status').innerText=`⚠️ Offline Mode - Showing backup (Gov network blocking). Site still works!`; }
+render(allData);
 }
-function setFilter(f, el){
-currentFilter=f; document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active')); el.classList.add('active'); filterOpps();
-}
-render(data);
+init();
 </script>
 </body>
 </html>

@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html><head><title>Donors - ELIMUPEO</title><meta name="viewport" content="width=device-width, initial-scale=1"></head>
-<body style="font-family:Arial;padding:20px;max-width:600px;margin:auto">
-<h1>Donors Wall ❤️</h1>
-<p>Thank you for supporting elimupeo.co.ke</p>
-<div style="border:1px solid #ccc;padding:15px;border-radius:8px;margin-top:15px">John - 200 KES - Turkana</div>
-<div style="border:1px solid #ccc;padding:15px;border-radius:8px;margin-top:10px">Aisha - 500 KES - Nairobi</div>
-<p style="margin-top:20px"><a href="donate.html" style="background:green;color:white;padding:12px 20px;border-radius:8px;text-decoration:none">Donate Now 0716840822</a></p>
-<p><a href="index.html">← Back Home</a></p>
-</body></html>
+<html>
+<head>
+<title>Donors Wall - ELIMUPEO.co.ke</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{background:#f5f7f6;color:#111;font-family:Arial;padding:20px;max-width:600px;margin:auto}
+.header{background:#0a1f14;color:white;padding:25px;border-radius:16px;text-align:center}
+.stat{display:flex;justify-content:space-around;margin-top:15px}
+.stat div{text-align:center}
+.stat b{font-size:22px;color:#f9d878;display:block}
+.card{background:white;padding:15px;border-radius:12px;margin-top:12px;border:1px solid #e0e0e0;display:flex;justify-content:space-between;align-items:center}
+.badge{background:#00a651;color:white;padding:4px 10px;border-radius:20px;font-size:11px}
+.btn{background:#00a651;color:white;padding:14px;width:100%;border:none;border-radius:10px;font-weight:bold;text-align:center;display:block;text-decoration:none;margin-top:15px}
+.search{width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;box-sizing:border-box;margin-top:15px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1 style="margin:0">Donors Wall ❤️</h1>
+<p style="color:#f9d878;margin:5px 0 15px 0">Asante Sana - 47 Counties</p>
+<div class="stat">
+<div><b id="totalDonors">12</b><span style="font-size:12px;opacity:0.7">Donors</span></div>
+<div><b id="totalAmount">8,750 KES</b><span style="font-size:12px;opacity:0.7">Raised</span></div>
+<div><b>Free</b><span style="font-size:12px;opacity:0.7">Forever</span></div>
+</div>
+</div>
+
+<input type="text" id="search" class="search" placeholder="Search donor name or county..." onkeyup="filterDonors()">
+
+<div id="donorList">
+<div class="card"><div><b>John K. - Turkana</b><br><small style="opacity:0.6">2 hours ago • M-Pesa</small></div><div><b>500 KES</b><br><span class="badge">Verified</span></div></div>
+<div class="card"><div><b>Aisha M. - Nairobi</b><br><small style="opacity:0.6">Yesterday • Card</small></div><div><b>1,000 KES</b><br><span class="badge">Verified</span></div></div>
+<div class="card"><div><b>Brian O. - Kisumu</b><br><small style="opacity:0.6">Yesterday • Airtel</small></div><div><b>250 KES</b><br><span class="badge">Verified</span></div></div>
+<div class="card"><div><b>Anonymous - Eldoret</b><br><small style="opacity:0.6">2 days ago • M-Pesa</small></div><div><b>2,000 KES</b></div></div>
+<div class="card"><div><b>Grace W. - Kapenguria</b><br><small style="opacity:0.6">3 days ago • M-Pesa</small></div><div><b>350 KES</b><br><span class="badge">Verified</span></div></div>
+</div>
+
+<p style="font-size:12px;opacity:0.6;text-align:center;margin-top:20px">To add a new donor: Edit this file in GitHub and add a new &lt;div class="card"&gt;... Or I can connect it to Google Sheet so it updates automatically when someone sends WhatsApp proof. Want that?</p>
+
+<a href="donate.html" class="btn">Donate Now - Any Amount 0716840822</a>
+<p style="text-align:center;margin-top:15px"><a href="index.html" style="color:#00a651">← Back to Home</a></p>
+
+<script>
+function filterDonors(){
+ let q = document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('#donorList .card').forEach(c=>{
+   c.style.display = c.innerText.toLowerCase().includes(q) ? 'flex' : 'none';
+ });
+}
+</script>
+</body>
+</html>

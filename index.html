@@ -2,64 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ELIMUPEO.co.ke - Kenya's #1 Opportunity Hub | Scholarships, Jobs & Grants</title>
+<title>ELIMUPEO.co.ke - Kenya's #1 Opportunity Hub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kenya's trusted hub for scholarships, attachments, jobs & grants. Verified daily from Google Sheet. For all 47 counties.">
 <link rel="icon" href="logo.png">
 <style>
 :root{--green:#0a1f14;--light:#123722;--brand:#00a651;--yellow:#f9d878}
-*{box-sizing:border-box} body{margin:0;font-family:Arial, sans-serif;background:var(--green);color:white}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--green);color:white}
 .topbar{background:var(--yellow);color:black;text-align:center;padding:9px;font-weight:bold;font-size:13px}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto;flex-wrap:wrap}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto}
 .nav img{height:46px;border-radius:8px;background:white;padding:2px}
 .nav a{color:var(--yellow);text-decoration:none;margin-left:14px;font-size:14px;font-weight:bold}
 .hero{max-width:1100px;margin:auto;padding:40px 20px;text-align:center}
-.hero h1{font-size:42px;line-height:1.1;margin:10px 0} .hero h1 span{color:var(--yellow)}
-.hero p{opacity:0.85;max-width:700px;margin:12px auto;line-height:1.6;font-size:16px}
-.btn{padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:6px;border:none;cursor:pointer}
+.hero h1{font-size:40px;margin:10px 0} .hero h1 span{color:var(--yellow)}
+.btn{padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:6px}
 .btn-y{background:var(--yellow);color:black} .btn-g{background:var(--brand);color:white}
-.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0}
-.filters button{padding:9px 16px;border-radius:20px;border:1px solid #2a5a3a;background:var(--light);color:white;cursor:pointer}
-.filters button.active{background:var(--yellow);color:black;border-color:var(--yellow)}
 .search{max-width:500px;margin:15px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--light);color:white;text-align:center}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+.filters button{padding:8px 15px;border-radius:20px;border:1px solid #2a5a3a;background:var(--light);color:white;cursor:pointer}
+.filters button.active{background:var(--yellow);color:black}
 .grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 20px}
-.card{background:var(--light);border:1px solid #1e4a2e;border-radius:14px;padding:18px;transition:0.2s}
-.card:hover{transform:translateY(-2px);border-color:var(--brand)}
-.card small{opacity:0.6;font-size:11px}
-.stats{display:flex;gap:12px;justify-content:center;margin:22px 0;flex-wrap:wrap}
-.stat{background:var(--light);padding:15px 22px;border-radius:12px;text-align:center;border:1px solid #1e4a2e}
-.stat b{font-size:22px;color:var(--yellow);display:block}
+.card{background:var(--light);border:1px solid #1e4a2e;border-radius:14px;padding:18px}
+.card small{opacity:0.6;font-size:11px} .card h3{margin:8px 0}
 .footer{text-align:center;padding:30px 20px;opacity:0.6;font-size:12px;line-height:1.8}
-@media(max-width:700px){.hero h1{font-size:30px}}
 </style>
 </head>
 <body>
-<div class="topbar">🇰🇪 Kenya's #1 Opportunity Hub | ❤️ <a href="donate.html" style="color:black;text-decoration:underline">Donate Any Amount - M-Pesa 0716840822</a></div>
+<div class="topbar">🇰🇪 Kenya's #1 Opportunity Hub - All 47 Counties</div>
 
 <div class="nav">
 <div style="display:flex;align-items:center;gap:10px">
 <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
-<div><b>ELIMUPEO.co.ke</b><br><small style="opacity:0.7;font-size:11px">KENYA • 47 COUNTIES</small></div>
+<b>ELIMUPEO.co.ke</b>
 </div>
-<div>
-<a href="index.html">Home</a>
-<a href="donate.html">Donate</a>
-<a href="donors.html">Donors ❤️</a>
-<a href="admin.html">Admin</a>
-</div>
+<div><a href="index.html">Home</a> <a href="donate.html">Donate</a></div>
 </div>
 
 <div class="hero">
-<p style="color:var(--yellow);letter-spacing:3px;font-size:11px;font-weight:bold">🇰🇪 TRUSTED BY STUDENTS IN ALL 47 COUNTIES</p>
 <h1>Find Your Next <span>Opportunity</span> in Kenya</h1>
-<p>Kenya's hub for scholarships, attachments, jobs & grants. Verified daily, live from Google Sheet.</p>
-<div class="stats">
-<div class="stat"><b>1,200+</b><small>Students Placed</small></div>
-<div class="stat"><b id="liveCount">Loading...</b><small>From Google Sheet</small></div>
-<div class="stat"><b>47</b><small>Counties</small></div>
-<div class="stat"><b>100%</b><small>Free</small></div>
-</div>
-<input id="searchBox" class="search" placeholder="🔍 Search e.g. Equity, HELB, Kisii..." onkeyup="filterCards()">
+<p style="opacity:0.8">Scholarships, attachments, jobs & grants - Verified daily - 47 Counties</p>
+<input id="searchBox" class="search" placeholder="🔍 Search e.g. Equity, Kisii, HELB..." onkeyup="search()">
 <div class="filters">
 <button class="active" onclick="filterCat('All',this)">All</button>
 <button onclick="filterCat('Government',this)">Government</button>
@@ -69,43 +50,40 @@
 </div>
 </div>
 
-<div id="grid" class="grid"><div class="card"><h3>Connecting to your Google Sheet...</h3><p>Please wait...</p></div></div>
+<div id="grid" class="grid"></div>
 
-<div class="footer">
-ELIMUPEO.co.ke - Scholarships, Jobs, Attachments & Grants • Free for All 47 Counties<br>
-Contact: 0716840822 • hello@elimuPeo.co.ke • Operations Base: Nyamira County (Serving all Kenya) • © 2026
-</div>
+<div class="footer">ELIMUPEO.co.ke - Free for all 47 Counties - Contact: 0716840822<br>Operations Base: Nyamira County (Serving all Kenya) - © 2026</div>
 
 <script>
-// === YOUR SHEET ID - ALREADY CONNECTED ===
-const SHEET_ID = "1Bc4XioYrrudBlL4ifUXNnhOLyTAecN8WlFDXnq9FPK8";
-const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
-
-async function loadSheet(){
- try{
-   const res = await fetch(SHEET_URL);
-   const txt = await res.text();
-   const json = JSON.parse(txt.substr(47).slice(0,-2));
-   const rows = json.table.rows;
-   let html = "";
-   rows.forEach(r=>{
-     if(!r.c[0]) return;
-     const title=r.c[0]?.v||""; 
-     const type=r.c[1]?.v||"General"; 
-     const desc=r.c[2]?.v||""; 
-     const link=r.c[3]?.v||"#"; 
-     const county=r.c[4]?.v||"47 Counties";
-     html += `<div class="card" data-cat="${type}"><small>${type.toUpperCase()} • ${county}</small><h3>${title}</h3><p style="opacity:0.8;font-size:14px">${desc}</p><a href="${link}" target="_blank" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply / View</a></div>`;
-   });
-   document.getElementById('grid').innerHTML = html || "<div class='card'><h3>No rows found - check your Sheet has data in columns A-E</h3></div>";
-   document.getElementById('liveCount').innerText = rows.length + " Live";
- }catch(e){ 
-   document.getElementById('grid').innerHTML = `<div class='card'><h3>Almost there! Do this last step:</h3><p>Go to your Sheet > File > Share > Publish to web > Publish > Then reload this site. Error: ${e.message}</p></div>`; 
- }
+const data = [
+{type:"Government", county:"All 47", title:"Elimu Scholarship 2026 - Ministry of Education", desc:"For KCPE needy students joining secondary. Apply via Equity Bank.", link:"https://www.education.go.ke"},
+{type:"Foundations", county:"All 47", title:"Equity Wings to Fly 2026", desc:"For bright needy KCPE top performers - Full scholarship.", link:"https://equitygroupfoundation.com"},
+{type:"International", county:"TVET & University", title:"Mastercard Foundation Scholarship", desc:"Full scholarship at partner universities across Kenya.", link:"https://mastercardfdn.org"},
+{type:"Jobs", county:"Nationwide", title:"PSC Internship 2026 - Public Service", desc:"Government internship for graduates - All counties.", link:"https://www.publicservice.go.ke"},
+{type:"Government", county:"All 47", title:"HELB Loan & Scholarship 2026", desc:"Apply for TVET and University loans.", link:"https://www.helb.co.ke"},
+{type:"Foundations", county:"Nairobi, Kisii, Nyamira", title:"KCB Foundation 2Jiajiri Scholarship", desc:"For TVET students - construction, agribusiness.", link:"https://kcbgroup.com"},
+{type:"International", county:"All 47", title:"DAAD Germany Scholarships", desc:"For Kenyan graduates to study in Germany.", link:"https://www.daad.or.ke"},
+{type:"Jobs", county:"Nairobi", title:"Attachment - KENGEN, KPLC, Safaricom", desc:"Industrial attachment opportunities.", link:"#"}
+];
+function render(list){
+ let h="";
+ list.forEach(d=>{
+   h+=`<div class="card" data-type="${d.type}"><small>${d.type.toUpperCase()} • ${d.county}</small><h3>${d.title}</h3><p style="opacity:0.8;font-size:14px">${d.desc}</p><a href="${d.link}" target="_blank" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply / View</a></div>`;
+ });
+ document.getElementById('grid').innerHTML=h;
 }
-function filterCards(){ let q=document.getElementById('searchBox').value.toLowerCase(); document.querySelectorAll('#grid .card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';}); }
-function filterCat(cat,btn){ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); document.querySelectorAll('#grid .card').forEach(c=>{ if(cat==='All')c.style.display='block'; else c.style.display=c.innerText.toLowerCase().includes(cat.toLowerCase())?'block':'none'; }); }
-loadSheet();
+function search(){
+ let q=document.getElementById('searchBox').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';});
+}
+function filterCat(cat,btn){
+ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+ document.querySelectorAll('.card').forEach(c=>{
+   if(cat==='All') c.style.display='block';
+   else c.style.display=c.innerText.toLowerCase().includes(cat.toLowerCase())?'block':'none';
+ });
+}
+render(data);
 </script>
 </body>
 </html>

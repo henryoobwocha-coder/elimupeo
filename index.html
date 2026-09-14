@@ -1,95 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elimupeo - Kenya's #1 Opportunity Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>ELIMUPEO.co.ke - Kenya's #1 Opportunity Hub | Scholarships, Jobs & Grants</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kenya's trusted hub for scholarships, attachments, jobs & grants. Verified daily from Google Sheet. For all 47 counties. 1,200+ students placed.">
+<meta name="keywords" content="scholarships Kenya, jobs Kenya, attachments Kenya, grants Kenya, 47 counties">
+<link rel="icon" href="logo.png">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
-body{background:#f8fafc;color:#0f172a}
-header{background:white;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:99;flex-wrap:wrap;gap:10px}
-.logo{font-weight:800;font-size:26px;color:#0a7a42;letter-spacing:-1px} .logo span{color:#f59e0b}
-.nav-links{display:flex;align-items:center;gap:12px}
-.nav-links a{text-decoration:none;font-weight:600;font-size:14px}
-.link-donors{color:#0a7a42;border:1px solid #0a7a42;padding:8px 14px;border-radius:20px}
-.link-donate{background:#0a7a42;color:white;padding:8px 16px;border-radius:20px}
-.hero{background:linear-gradient(135deg,#0a7a42 0%,#065f46 100%);color:white;padding:60px 5%;text-align:center}
-.hero h1{font-size:42px;line-height:1.1;margin-bottom:15px} .hero h1 span{color:#fde68a}
-.search-box{background:white;max-width:700px;margin:30px auto 0;display:flex;border-radius:50px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
-.search-box input{flex:1;border:none;padding:15px 20px;font-size:16px;outline:none;border-radius:50px}
-.search-box button{background:#0a7a42;color:white;border:none;padding:15px 30px;border-radius:50px;font-weight:600;cursor:pointer}
-.stats{display:flex;justify-content:center;gap:30px;margin-top:30px;flex-wrap:wrap}
-.stat{background:rgba(255,255,255,0.15);padding:10px 20px;border-radius:30px;font-size:14px}
-.filters{display:flex;gap:10px;justify-content:center;padding:25px 5%;flex-wrap:wrap}
-.filter{border:1px solid #e2e8f0;background:white;padding:10px 20px;border-radius:30px;cursor:pointer;font-weight:600} .filter.active{background:#0a7a42;color:white;border-color:#0a7a42}
-.container{max-width:1200px;margin:0 auto;padding:20px 5% 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.card{background:white;border-radius:18px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,0.04);border:1px solid #f1f5f9;transition:0.3s} .card:hover{transform:translateY(-5px)}
-.tag{font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px;text-transform:uppercase} .tag-gov{background:#dcfce7;color:#166534} .tag-int{background:#dbeafe;color:#1e40af} .tag-foundation{background:#fef3c7;color:#92400e} .tag-regional{background:#e0e7ff;color:#4338ca}
-.card h3{margin:12px 0 8px;font-size:18px;line-height:1.3}
-.card p{font-size:14px;color:#475569;line-height:1.5;margin-bottom:12px}
-.meta{display:flex;justify-content:space-between;align-items:center;margin-top:15px;padding-top:15px;border-top:1px dashed #e2e8f0}
-.btn-apply{background:#0f172a;color:white;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:600;font-size:13px}
-footer{background:#0f172a;color:#94a3b8;padding:40px 5%;text-align:center;margin-top:40px}
-#status{padding:10px;text-align:center;font-size:13px;background:#fef9c3;color:#713f12}
+:root{--green:#0a1f14;--light:#123722;--brand:#00a651;--yellow:#f9d878}
+*{box-sizing:border-box} body{margin:0;font-family:Arial, sans-serif;background:var(--green);color:white}
+.topbar{background:var(--yellow);color:black;text-align:center;padding:9px;font-weight:bold;font-size:13px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto;flex-wrap:wrap}
+.nav img{height:46px;border-radius:8px;background:white;padding:2px}
+.nav a{color:var(--yellow);text-decoration:none;margin-left:14px;font-size:14px;font-weight:bold}
+.hero{max-width:1100px;margin:auto;padding:40px 20px;text-align:center}
+.hero h1{font-size:42px;line-height:1.1;margin:10px 0} .hero h1 span{color:var(--yellow)}
+.hero p{opacity:0.85;max-width:700px;margin:12px auto;line-height:1.6;font-size:16px}
+.btn{padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:6px;border:none;cursor:pointer}
+.btn-y{background:var(--yellow);color:black} .btn-g{background:var(--brand);color:white}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.filters button{padding:9px 16px;border-radius:20px;border:1px solid #2a5a3a;background:var(--light);color:white;cursor:pointer}
+.filters button.active{background:var(--yellow);color:black;border-color:var(--yellow)}
+.search{max-width:500px;margin:15px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--light);color:white;text-align:center}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 20px}
+.card{background:var(--light);border:1px solid #1e4a2e;border-radius:14px;padding:18px;transition:0.2s}
+.card:hover{transform:translateY(-2px);border-color:var(--brand)}
+.card small{opacity:0.6;font-size:11px;letter-spacing:1px}
+.stats{display:flex;gap:12px;justify-content:center;margin:22px 0;flex-wrap:wrap}
+.stat{background:var(--light);padding:15px 22px;border-radius:12px;text-align:center;border:1px solid #1e4a2e}
+.stat b{font-size:22px;color:var(--yellow);display:block}
+.footer{text-align:center;padding:30px 20px;opacity:0.6;font-size:12px;line-height:1.8}
+@media(max-width:700px){.hero h1{font-size:30px}.nav{justify-content:center}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">ELIMU<span>PEO</span> 🇰🇪</div>
-<div class="nav-links">
-<a href="donors.html" class="link-donors">❤️ Donors</a>
-<a href="donate.html" class="link-donate">💚 Donate</a>
+<div class="topbar">🇰🇪 Kenya's #1 Opportunity Hub | ❤️ <a href="donate.html" style="color:black;text-decoration:underline">Donate Any Amount - Keep Education Free - M-Pesa 0716840822</a></div>
+
+<div class="nav">
+<div style="display:flex;align-items:center;gap:10px">
+<img src="logo.png" alt="ELIMUPEO Logo" onerror="this.style.display='none'">
+<div><b>ELIMUPEO.co.ke</b><br><small style="opacity:0.7;font-size:11px">KENYA • 47 COUNTIES</small></div>
 </div>
-</header>
-<section class="hero">
-<h1>Find Your Next <br><span>Opportunity</span></h1>
-<p style="opacity:0.9;max-width:600px;margin:0 auto">Kenya's trusted hub for scholarships, attachments, jobs & grants. Verified daily.</p>
-<div class="search-box"><input type="text" id="searchInput" placeholder="Search e.g. HELB, Masters, Germany..." onkeyup="filterOpps()"><button onclick="filterOpps()">Search</button></div>
-<div class="stats"><div class="stat">✅ Live from Google Sheet</div><div class="stat">🎓 1,200+ Students Placed</div><div class="stat">🇰🇪 All 47 Counties</div></div>
-</section>
-<div id="status">Connecting to your Google Sheet...</div>
-<div class="filters"><div class="filter active" onclick="setFilter('all',this)">All</div><div class="filter" onclick="setFilter('Government',this)">Government</div><div class="filter" onclick="setFilter('International',this)">International</div><div class="filter" onclick="setFilter('Foundation',this)">Foundations</div></div>
-<div class="container" id="list"></div>
-<footer><h3 style="color:white;margin-bottom:10px">ELIMUPEO</h3><p>Built for Kenyan Youth | From Kapenguria to the World | M-Pesa: 0716840822</p><p style="margin-top:15px"><a href="donate.html" style="color:#fde68a;text-decoration:none;font-weight:600">Support us → Donate</a> | <a href="donors.html" style="color:#94a3b8;text-decoration:none">Donors Wall</a></p><p style="margin-top:15px;font-size:12px">© 2026 Elimupeo Foundation - Powered by Google Sheets</p></footer>
+<div>
+<a href="index.html">Home</a>
+<a href="donate.html">Donate</a>
+<a href="donors.html">Donors ❤️</a>
+<a href="admin.html">Admin</a>
+</div>
+</div>
+
+<div class="hero">
+<p style="color:var(--yellow);letter-spacing:3px;font-size:11px;font-weight:bold">🇰🇪 TRUSTED BY STUDENTS IN ALL 47 COUNTIES</p>
+<h1>Find Your Next <span>Opportunity</span> in Kenya</h1>
+<p>Kenya's trusted hub for <b>scholarships, attachments, jobs & grants</b>. Verified daily, live from Google Sheet. No paywall, no bias — for TVETs, colleges & universities across Kenya.</p>
+
+<div class="stats">
+<div class="stat"><b>1,200+</b><small>Students Placed</small></div>
+<div class="stat"><b id="liveCount">Live</b><small>From Google Sheet</small></div>
+<div class="stat"><b>47</b><small>Counties Covered</small></div>
+<div class="stat"><b>100%</b><small>Free Forever</small></div>
+</div>
+
+<input id="searchBox" class="search" placeholder="🔍 Search scholarship, job, county, e.g. Turkana, Kisii..." onkeyup="filterCards()">
+<div class="filters">
+<button class="active" onclick="filterCat('All',this)">All</button>
+<button onclick="filterCat('Government',this)">Government</button>
+<button onclick="filterCat('International',this)">International</button>
+<button onclick="filterCat('Foundations',this)">Foundations</button>
+<button onclick="filterCat('Jobs',this)">Jobs & Attachments</button>
+</div>
+</div>
+
+<div id="grid" class="grid">
+<div class="card"><h3>Connecting to your Google Sheet...</h3><p style="opacity:0.7">Live scholarships will appear here.</p></div>
+</div>
+
+<div style="max-width:1100px;margin:30px auto;padding:0 20px">
+<div style="background:var(--light);padding:20px;border-radius:12px;text-align:center;border:1px solid #1e4a2e">
+<h3 style="margin:0;color:var(--yellow)">Why ElimuPeo is Different?</h3>
+<p style="opacity:0.8;font-size:14px;max-width:700px;margin:10px auto">We don't charge. We don't hide links. We verify daily. Built for every Kenyan student from Turkana to Kwale, Busia to Garissa — not just Nairobi. All 47 counties, equal chance.</p>
+<a href="donate.html" class="btn btn-y">Support Us - Keep it Free</a>
+<a href="donors.html" class="btn btn-g">See Our 12+ Donors ❤️</a>
+</div>
+</div>
+
+<div class="footer">
+<b>ELIMUPEO.co.ke</b> - Kenya's #1 Opportunity Hub • Scholarships, Jobs, Attachments & Grants • Free for All 47 Counties<br>
+Built with ❤️ for Kenyan Students • Contact: 0716840822 • hello@elimuPeo.co.ke<br>
+<small>Operations Base: Nyamira County, Kenya (Serving entire Kenya) • Till: Coming Monday • © 2026 Keeping Education Free</small>
+</div>
+
 <script>
-const GOOGLE_SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPhtMouEfXFHLQP-nZwyct4YYF4PKjZqycJmW96xlS6_XNhKAEuJmRVIxSPayR-GwN_wj_kLI0d-MK/pub?output=csv";
-const fallback=[
-{title:"HELB Masters & PhD Scholarships 2025",description:"HELB funding for Kenyan students",deadline:"30 Sep 2025",type:"Government",link:"https://helb.co.ke",county:"All Counties"},
-{title:"Commonwealth UK Scholarship",description:"Fully funded UK Masters",deadline:"15 Oct 2025",type:"International",link:"https://cscuk.fcdo.gov.uk",county:"All Counties"}
-];
-let allData=[],currentFilter='all';
-function getTag(t){ t=(t||'').toLowerCase(); if(t.includes('gov'))return 'tag-gov'; if(t.includes('inter'))return 'tag-int'; if(t.includes('found'))return 'tag-foundation'; return 'tag-regional';}
-function render(list){
-document.getElementById('list').innerHTML=list.map(o=>`
-<div class="card"><span class="tag ${getTag(o.type)}">${o.type}</span><h3>${o.title}</h3><p>${o.description}</p><small style="color:#64748b">📍 ${o.county||'All Counties'}</small><div class="meta"><small style="color:#ef4444;font-weight:600">⏰ ${o.deadline}</small><a class="btn-apply" href="${o.link}" target="_blank">Apply →</a></div></div>`).join('');
+const SHEET_ID = "YOUR_SHEET_ID_HERE";
+const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;
+async function loadSheet(){
+ try{
+   if(SHEET_ID.includes("YOUR_SHEET_ID")){
+     document.getElementById('grid').innerHTML = `
+       <div class="card"><small>GOVERNMENT • All 47 Counties</small><h3>Elimu Scholarship 2026 - Ministry of Education</h3><p>For needy students joining senior school. Apply via Jomo Kenyatta Foundation.</p><a href="#" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply</a></div>
+       <div class="card"><small>INTERNATIONAL • TVET & University</small><h3>Mastercard Foundation Scholarship</h3><p>Full scholarship for bright needy students across Kenya.</p><a href="#" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply</a></div>
+       <div class="card"><small>JOBS • Nationwide</small><h3>PSC Internship 2026</h3><p>Government internship for graduates - All counties.</p><a href="#" class="btn btn-g" style="padding:8px 14px;font-size:12px">View</a></div>
+       <div class="card"><small>FOUNDATIONS • 47 Counties</small><h3>Equity Wings to Fly 2026</h3><p>For KCPE top performers from vulnerable backgrounds.</p><a href="#" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply</a></div>
+     `;
+     document.getElementById('liveCount').innerText = "4 Sample";
+     return;
+   }
+   const res = await fetch(SHEET_URL);
+   const txt = await res.text();
+   const json = JSON.parse(txt.substr(47).slice(0,-2));
+   const rows = json.table.rows;
+   let html = "";
+   rows.forEach(r=>{
+     const title = r.c[0]?.v || ""; const type = r.c[1]?.v || "All"; const desc = r.c[2]?.v || ""; const link = r.c[3]?.v || "#"; const county = r.c[4]?.v || "47 Counties";
+     html += `<div class="card" data-cat="${type}"><small>${type.toUpperCase()} • ${county}</small><h3>${title}</h3><p style="opacity:0.8;font-size:14px">${desc}</p><a href="${link}" target="_blank" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply / View</a></div>`;
+   });
+   document.getElementById('grid').innerHTML = html;
+   document.getElementById('liveCount').innerText = rows.length + " Live";
+ }catch(e){
+   document.getElementById('grid').innerHTML = "<div class='card'><h3>Check Sheet Publish Settings</h3><p>Publish your Google Sheet: File > Share > Publish to Web</p></div>";
+ }
 }
-function filterOpps(){const q=document.getElementById('searchInput').value.toLowerCase();let f=allData.filter(o=>(currentFilter=='all'||(o.type||'').toLowerCase().includes(currentFilter.toLowerCase()))&&((o.title||'').toLowerCase().includes(q)||(o.description||'').toLowerCase().includes(q)));render(f);}
-function setFilter(f,el){currentFilter=f;document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));el.classList.add('active');filterOpps();}
-function parseCSV(text){
-  const lines = text.split('\n').filter(l=>l.trim());
-  const headers = lines[0].split(',').map(h=>h.trim().toLowerCase());
-  return lines.slice(1).map(line=>{
-    const values = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(v=>v.replace(/^"|"$/g,'').trim());
-    let obj={};
-    headers.forEach((h,i)=>obj[h]=values[i]||'');
-    return obj;
-  });
-}
-async function init(){
-try{
- const res = await fetch(GOOGLE_SHEET_CSV);
- const csvText = await res.text();
- const data = parseCSV(csvText);
- allData = data.filter(d=>d.title).map(d=>({title:d.title,description:d.description,deadline:d.deadline,type:d.type||'Government',link:d.link||'#',county:d.county||'All Counties'}));
- if(!allData.length) throw new Error('Sheet empty');
- document.getElementById('status').innerText=`✅ Connected: ${allData.length} opportunities live from Google Sheet`;
-}catch(e){
- allData=fallback;
- document.getElementById('status').innerText=`⚠️ Using backup - ${e.message}. Add more rows to your Sheet!`;
-}
-render(allData);
-}
-init();
+function filterCards(){ let q=document.getElementById('searchBox').value.toLowerCase(); document.querySelectorAll('#grid .card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';}); }
+function filterCat(cat,btn){ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); document.querySelectorAll('#grid .card').forEach(c=>{ if(cat==='All'){c.style.display='block';} else {c.style.display=(c.dataset.cat===cat || c.innerText.toLowerCase().includes(cat.toLowerCase()))?'block':'none';} }); }
+loadSheet();
 </script>
 </body>
 </html>

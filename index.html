@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elimupeo | Kenya's #1 Opportunity Hub - Scholarships & Jobs 47 Counties</title>
-<meta name="description" content="Find verified scholarships, government attachments, international grants, and jobs across all 47 counties in Kenya. 100% free daily updates.">
-<meta property="og:title" content="ELIMUPEO.co.ke - Kenya's #1 Opportunity Hub"/>
-<meta property="og:description" content="Verified scholarships, attachments, jobs & grants daily for all 47 counties. 100% Free."/>
-<meta property="og:image" content="https://elimupeo.co.ke/logo.jpg"/>
-<meta property="og:type" content="website"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>elimuPeo.co.ke — Education Opportunities Kenya</title>
+<meta name="description" content="Verified Scholarships, Internships, Attachments and Jobs in Kenya — Updated Daily">
 <link rel="icon" href="logo.jpg">
-<style>:root{--green:#0a1f14;--light:#123722;--brand:#00a651;--yellow:#f9d878}*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--green);color:white}.topbar{background:var(--yellow);color:black;text-align:center;padding:9px;font-weight:bold;font-size:13px}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto;flex-wrap:wrap}.nav img{height:46px;border-radius:8px;background:white;padding:2px}.nav a{color:var(--yellow);text-decoration:none;margin-left:12px;font-size:13px;font-weight:bold}.hero{max-width:1100px;margin:auto;padding:30px 20px;text-align:center}.btn{padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:6px}.btn-y{background:var(--yellow);color:black}.btn-g{background:var(--brand);color:white}.search{max-width:500px;margin:15px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--light);color:white;text-align:center}.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:20px}.card{background:var(--light);border:1px solid #1e4a2e;border-radius:14px;padding:18px}.footer{text-align:center;padding:30px;opacity:0.6;font-size:12px}</style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,sans-serif}
+body{background:#f8fafc;color:#0f172a;line-height:1.6}
+header{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:14px 18px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:42px;height:42px;border-radius:8px;object-fit:cover;border:1px solid #e2e8f0}
+.brand h1{font-size:18px;font-weight:800}
+.brand h1 span{color:#2563eb}
+.filter{padding:8px 14px;border-radius:999px;border:1px solid #e2e8f0;background:#fff;font-size:13px;cursor:pointer}
+.filter.active{background:#0f172a;color:#fff}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.search-wrap{display:flex;gap:10px;margin:18px 0}
+.search-wrap input{flex:1;padding:14px 16px;border-radius:12px;border:1px solid #e2e8f0;font-size:14px}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e40af 100%);color:#fff;border-radius:18px;padding:22px 20px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.06)}
+.badge{font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;text-transform:uppercase}
+.badge.scholarship{background:#dcfce7;color:#166534}
+.badge.internship{background:#dbeafe;color:#1e40af}
+.badge.attachment{background:#fef9c3;color:#854d0e}
+.badge.job{background:#fee2e2;color:#991b1b}
+.county{font-size:12px;color:#64748b;background:#f1f5f9;padding:4px 8px;border-radius:999px}
+.card-footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.deadline{font-size:12px;color:#b45309;background:#fffbeb;border:1px solid #fde68a;padding:4px 8px;border-radius:999px}
+.apply{font-size:13px;font-weight:700;color:#fff;background:#2563eb;padding:8px 14px;border-radius:999px;text-decoration:none}
+footer{text-align:center;padding:28px;color:#64748b;font-size:12px;border-top:1px solid #e2e8f0;margin-top:30px;background:#fff}
+</style>
 </head>
 <body>
-<div class="topbar">🇰🇪 LIVE from Google Sheet | M-Pesa Support: 0716840822</div>
-<div class="nav"><div style="display:flex;align-items:center;gap:10px"><img src="logo.jpg" onerror="this.style.display='none'"><b>ELIMUPEO.co.ke</b></div><div><a href="index.html">Home</a><a href="government-opportunities.html">Gov</a><a href="foundations-grants.html">Foundations</a><a href="donate.html">Donate</a></div></div>
-<div class="hero">
-<h1>Find Your Next <span style="color:#f9d878">Opportunity</span></h1>
-<p id="count" style="color:#f9d878">Loading from Google Sheet...</p>
-<input id="searchBox" class="search" placeholder="🔍 Search Equity, HELB, Nyamira, Kisii..." onkeyup="filterCards()">
-<p><a href="https://wa.me/254716840822?text=ALERTS" class="btn btn-y">📲 Text 'ALERTS' to 0716840822 for Daily Updates</a></p>
+<header>
+  <div class="brand">
+    <img src="logo.jpg" alt="elimuPeo logo">
+    <h1>elimuPeo<span>.co.ke</span></h1>
+  </div>
+  <nav id="typeFilters">
+    <button class="filter active" data-type="all">All</button>
+    <button class="filter" data-type="Scholarship">Scholarships</button>
+    <button class="filter" data-type="Internship">Internships</button>
+    <button class="filter" data-type="Attachment">Attachment</button>
+    <button class="filter" data-type="Job">Jobs</button>
+  </nav>
+</header>
+<div class="container">
+  <div class="hero">
+    <div><h2>Verified Education Opportunities in Kenya</h2><p>Scholarships • Internships • Attachments • Jobs — Updated daily.</p></div>
+    <div id="countBadge">Loading...</div>
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search title, county...">
+    <select id="countyFilter" class="filter"><option value="all">All Counties</option><option value="Nairobi">Nairobi</option><option value="Kisumu">Kisumu</option><option value="All 47 Counties">All 47</option></select>
+  </div>
+  <div id="grid" class="grid"></div>
 </div>
-<div id="grid" class="grid"><p style="text-align:center;width:100%">⏳ Loading 1200+ opportunities from Sheet...</p></div>
-<div class="footer">Base: Nyamira County • Serving 47 Counties<br><span id="time"></span><br>© 2026 Elimupeo.co.ke | hello@elimupeo.co.ke</div>
+<footer>© 2026 elimuPeo.co.ke — Verified Education Opportunities Kenya<br>Verified • No fees charged</footer>
 <script>
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSPhtMouEfXFHLQP-nZwygct4YYF4PKjZqycJmW96xlS6_XNhKAEuJmRVlxSPayR-GwN_wj_kLI0d-MK/pub?output=csv";
-async function load(){
- try{
-  const r = await fetch(SHEET_URL);
-  const t = await r.text();
-  const rows = t.split(/\r?\n/).slice(1);
-  let h=""; let c=0;
-  rows.forEach(row=>{
-    if(!row.trim()) return;
-    let parts = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-    let type = (parts[0]||"General").replace(/"/g,"").trim();
-    let county = (parts[1]||"All 47").replace(/"/g,"").trim();
-    let title = (parts[2]||"").replace(/"/g,"").trim();
-    let desc = (parts[3]||"").replace(/"/g,"").trim();
-    let link = (parts[4]||"#").replace(/"/g,"").trim();
-    if(!title) return;
-    c++;
-    h+=`<div class="card"><small>${type.toUpperCase()} • ${county}</small><h3>${title}</h3><p style="opacity:0.8;font-size:14px">${desc.substring(0,180)}</p><a href="${link.startsWith('http')?link:'https://'+link}" target="_blank" class="btn btn-g" style="padding:8px 14px;font-size:12px">Apply</a></div>`;
-  });
-  document.getElementById('grid').innerHTML = h || "<p style='text-align:center'>Sheet is empty. Add rows: Type, County, Title, Description, Link</p>";
-  document.getElementById('count').innerText = `✅ ${c} Live Opportunities - Auto Updates from Sheet`;
-  document.getElementById('time').innerText = "Updated: "+new Date().toLocaleString();
- }catch(e){
-  document.getElementById('grid').innerHTML = "<p style='text-align:center;color:#f9d878'>⚠️ Could not load Sheet. Check internet.</p>";
- }
-}
-function filterCards(){let q=document.getElementById('searchBox').value.toLowerCase();document.querySelectorAll('.card').forEach(el=>{el.style.display=el.innerText.toLowerCase().includes(q)?'block':'none';});}
+// REPLACE THIS with your Sheet publish link
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/YOUR_PUBLISHED_ID/pub?gid=0&single=true&output=csv";
+let allData=[],currentType="all";
+function parseCSV(t){const rows=[];let cur=[],val="",inQ=false;for(let i=0;i<t.length;i++){const c=t[i],n=t[i+1];if(c=='"'){if(inQ&&n=='"'){val+='"';i++;}else inQ=!inQ;}else if(c==','&&!inQ){cur.push(val.trim());val="";}else if((c=='\n'||c=='\r')&&!inQ){if(val||cur.length){cur.push(val.trim());rows.push(cur);cur=[];val="";}if(c=='\r'&&n=='\n')i++;}else val+=c;}if(val||cur.length){cur.push(val.trim());rows.push(cur);}return rows;}
+async function load(){const r=await fetch(CSV_URL+"&t="+Date.now());const txt=await r.text();const rows=parseCSV(txt);const h=rows[0].map(x=>x.toLowerCase());const idx={title:h.indexOf("title"),description:h.indexOf("description"),deadline:h.indexOf("deadline"),type:h.indexOf("type"),link:h.indexOf("link"),county:h.indexOf("county")};allData=rows.slice(1).map(rr=>({title:rr[idx.title],description:rr[idx.description],deadline:rr[idx.deadline],type:rr[idx.type],link:rr[idx.link],county:rr[idx.county]})).filter(o=>o.title);render();}
+function render(){const q=document.getElementById("searchInput").value.toLowerCase();const cf=document.getElementById("countyFilter").value;let f=allData.filter(o=>{return (currentType=="all"||o.type.toLowerCase()==currentType.toLowerCase()) && (!q||(o.title+o.description+o.county).toLowerCase().includes(q)) && (cf=="all"||o.county.toLowerCase().includes(cf.toLowerCase()));});f.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline));document.getElementById("countBadge").textContent=f.length+" Active";document.getElementById("grid").innerHTML=f.map(o=>`<div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:10px"><span class="badge ${o.type.toLowerCase()}">${o.type}</span><span class="county">${o.county}</span></div><h3>${o.title}</h3><p>${o.description}</p><div class="card-footer"><span class="deadline">⏰ ${o.deadline||"Ongoing"}</span><a class="apply" href="${o.link}" target="_blank">Apply →</a></div></div>`).join("");}
+document.querySelectorAll("#typeFilters.filter").forEach(b=>{b.addEventListener("click",()=>{document.querySelectorAll("#typeFilters.filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");currentType=b.dataset.type;render();});});
+document.getElementById("searchInput").addEventListener("input",render);
+document.getElementById("countyFilter").addEventListener("change",render);
 load();
 </script>
 </body>

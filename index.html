@@ -1,27 +1,38 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elimupeo | Kenya's #1 Opportunity Hub</title><link rel="icon" href="logo.jpg">
-<style>:root{--g:#0a1f14;--l:#123722;--b:#00a651;--y:#f9d878}*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--g);color:#fff}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto}.nav img{height:46px;border-radius:10px;background:#fff;padding:2px}.hero{text-align:center;padding:25px 20px}.btn{padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block}.btn-y{background:var(--y);color:#000}.btn-g{background:var(--b);color:#fff;padding:8px 14px;font-size:12px}.search{max-width:500px;margin:15px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--l);color:#fff;text-align:center}.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:20px}.card{background:var(--l);border:1px solid #1e4a2e;border-radius:14px;padding:18px}.card.new{border:2px solid var(--y);background:#173d26}.footer{text-align:center;padding:30px;opacity:.6;font-size:12px}</style></head>
+<style>:root{--g:#0a1f14;--l:#123722;--b:#00a651;--y:#f9d878}*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--g);color:#fff}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto}.nav img{height:46px;border-radius:10px;background:#fff;padding:2px}.hero{text-align:center;padding:20px}.btn{padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block}.btn-g{background:var(--b);color:#fff;padding:8px 14px;font-size:12px}.search{max-width:500px;margin:10px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--l);color:#fff;text-align:center}.filters{max-width:1100px;margin:0 auto 10px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:0 20px}.filters button{padding:8px 14px;border-radius:20px;border:1px solid #2a5a3a;background:var(--l);color:#fff;cursor:pointer;font-size:13px}.filters button.active{background:var(--y);color:#000;font-weight:bold;border-color:var(--y)}.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:20px}.card{background:var(--l);border:1px solid #1e4a2e;border-radius:14px;padding:18px}.card.new{border:2px solid var(--y);background:#173d26}.footer{text-align:center;padding:30px;opacity:.6;font-size:12px}</style></head>
 <body>
 <div class="nav"><div style="display:flex;align-items:center;gap:10px"><img src="logo.jpg"><b>ELIMUPEO.co.ke</b></div><b style="color:var(--y)">Home</b></div>
-<div class="hero"><h1>Find Your Next <span style="color:var(--y)">Opportunity</span></h1><p style="color:var(--y)">✅ 12 Live Opportunities - Verified 17th Sept</p><input id="q" class="search" placeholder="🔍 Search KEMIS, KMTC, HELB..." oninput="f()"></div>
+<div class="hero"><h1>Find Your Next <span style="color:var(--y)">Opportunity</span></h1><p style="color:var(--y)">✅ 12 Live - Verified 17th Sept</p><input id="q" class="search" placeholder="🔍 Search KEMIS, KMTC, HELB..." oninput="f()"></div>
+<div class="filters">
+<button class="active" onclick="setFilter('all',this)">All</button>
+<button onclick="setFilter('Government',this)">Government</button>
+<button onclick="setFilter('Health',this)">Health</button>
+<button onclick="setFilter('Foundations',this)">Foundations</button>
+<button onclick="setFilter('International',this)">International</button>
+<button onclick="setFilter('Jobs',this)">Jobs</button>
+<button onclick="setFilter('Loan',this)">Loan</button>
+<button onclick="setFilter('Grant',this)">Grant</button>
+</div>
 <div id="grid" class="grid"></div>
-<div class="footer">Base: Nyamira • © 2026 Elimupeo.co.ke • HTML Only - Verified Daily</div>
+<div class="footer">Base: Nyamira • © 2026 Elimupeo.co.ke</div>
 <script>
+let activeCat='all';
 const jobs=[
-{type:"NEW • HEALTH",county:"Nationwide - 94 Posts",title:"KMTC 94 Jobs - Lecturers, ICT, Finance, Admin",desc:"Kenya Medical Training College hiring 94 staff. Lecturers, ICT Officers, Finance, Drivers. Portal: recruit.kmtc.ac.ke/jobs. Deadline: 30th Sept 2026. Chapter 6 clearance needed.",link:"https://recruit.kmtc.ac.ke/jobs"},
-{type:"NEW • KEMIS",county:"Parents - All 47",title:"🗓️ SCHOOL SELECTION UPDATES",desc:"Parents can now access schools selected for learners on KEMIS Portal. Go to: selection-placement.kemis.go.ke > My Selection > Enter assessment number > Download slip.",link:"https://selection-placement.kemis.go.ke/"},
-{type:"Government",county:"All 47 - Closed 14 Sept",title:"TSC 1,631 Promotional Vacancies - CLOSED",desc:"Senior Teacher, Deputy Headteacher, Principal posts. Application was via teachersonline.go.ke. Closed 14th Sept 2026. Kept here for transparency.",link:"https://teachersonline.go.ke"},
-{type:"Government",county:"All 47",title:"Elimu Scholarship 2026 - Ministry of Education",desc:"For needy KCPE students joining Form 1. Apply via Equity Bank.",link:"https://www.education.go.ke/elimu-scholarship-programme"},
-{type:"Foundations",county:"All 47",title:"Equity Wings to Fly 2026",desc:"Full secondary scholarship for top KCPE performers.",link:"https://equitygroupfoundation.com/wings-to-fly/"},
-{type:"Government",county:"Nationwide",title:"PSC Internship 2026",desc:"12-month government internship for graduates. Monthly stipend.",link:"https://www.publicservice.go.ke"},
-{type:"Loan",county:"All 47",title:"HELB Loan 2026/2027",desc:"First time and subsequent loans for University & TVET.",link:"https://www.helb.co.ke"},
-{type:"Foundations",county:"Nairobi/Kisii/Nyamira",title:"KCB 2Jiajiri Scholarship",desc:"TVET scholarship for youth - plumbing, beauty, construction.",link:"https://kcbgroup.com/foundation/2jiajiri/"},
-{type:"International",county:"All 47",title:"DAAD Germany Scholarships",desc:"Masters for Kenyans in Germany - fully funded.",link:"https://www.daad.or.ke"},
-{type:"International",county:"TVET & Uni",title:"Mastercard Foundation Scholarship",desc:"Full scholarship at partner universities.",link:"https://mastercardfdn.org/all/scholars/"},
-{type:"Jobs",county:"Nairobi",title:"Safaricom, KENGEN, KPLC Attachment",desc:"Industrial attachment slots open - apply on company portals.",link:"https://www.safaricom.co.ke/careers"},
-{type:"Grant",county:"Remote",title:"Ajira Digital Training - Ministry of ICT",desc:"Free online work skills by ICT Authority.",link:"https://ajiradigital.go.ke"}
+{type:"NEW • HEALTH",cat:"Health",county:"Nationwide - 94 Posts",title:"KMTC 94 Jobs - Lecturers, ICT, Finance, Admin",desc:"Kenya Medical Training College hiring 94 staff. Portal: recruit.kmtc.ac.ke/jobs. Deadline: 30th Sept 2026.",link:"https://recruit.kmtc.ac.ke/jobs"},
+{type:"NEW • KEMIS",cat:"Government",county:"Parents - All 47",title:"🗓️ SCHOOL SELECTION UPDATES",desc:"Check selected schools on KEMIS: selection-placement.kemis.go.ke > My Selection.",link:"https://selection-placement.kemis.go.ke/"},
+{type:"Government",cat:"Government",county:"All 47 - Closed 14 Sept",title:"TSC 1,631 Promotional Vacancies - CLOSED",desc:"Senior Teacher, Deputy Headteacher, Principal. Closed 14th Sept 2026.",link:"https://teachersonline.go.ke"},
+{type:"Government",cat:"Government",county:"All 47",title:"Elimu Scholarship 2026 - Ministry of Education",desc:"For needy KCPE students joining Form 1. Apply via Equity Bank.",link:"https://www.education.go.ke/elimu-scholarship-programme"},
+{type:"Foundations",cat:"Foundations",county:"All 47",title:"Equity Wings to Fly 2026",desc:"Full secondary scholarship for top KCPE performers.",link:"https://equitygroupfoundation.com/wings-to-fly/"},
+{type:"Government",cat:"Government",county:"Nationwide",title:"PSC Internship 2026",desc:"12-month government internship for graduates.",link:"https://www.publicservice.go.ke"},
+{type:"Loan",cat:"Loan",county:"All 47",title:"HELB Loan 2026/2027",desc:"First time and subsequent loans for University & TVET.",link:"https://www.helb.co.ke"},
+{type:"Foundations",cat:"Foundations",county:"Nairobi/Kisii/Nyamira",title:"KCB 2Jiajiri Scholarship",desc:"TVET scholarship - plumbing, beauty, construction.",link:"https://kcbgroup.com/foundation/2jiajiri/"},
+{type:"International",cat:"International",county:"All 47",title:"DAAD Germany Scholarships",desc:"Masters for Kenyans in Germany.",link:"https://www.daad.or.ke"},
+{type:"International",cat:"International",county:"TVET & Uni",title:"Mastercard Foundation Scholarship",desc:"Full scholarship at partner universities.",link:"https://mastercardfdn.org/all/scholars/"},
+{type:"Jobs",cat:"Jobs",county:"Nairobi",title:"Safaricom, KENGEN, KPLC Attachment",desc:"Industrial attachment slots.",link:"https://www.safaricom.co.ke/careers"},
+{type:"Grant",cat:"Grant",county:"Remote",title:"Ajira Digital Training - Ministry of ICT",desc:"Free online work skills by ICT Authority.",link:"https://ajiradigital.go.ke"}
 ];
-function render(l){document.getElementById('grid').innerHTML=l.map((j,i)=>`<div class="card ${i<2?'new':''}"><small>${j.type} • ${j.county}</small><h3>${j.title}</h3><p style="opacity:.9;font-size:14px;line-height:1.4">${j.desc}</p><a class="btn btn-g" href="${j.link}" target="_blank">Apply Now →</a></div>`).join('')}
-function f(){let q=document.getElementById('q').value.toLowerCase();render(jobs.filter(j=>(j.title+j.desc+j.county+j.type).toLowerCase().includes(q)))}
-render(jobs);
+function setFilter(cat,btn){activeCat=cat;document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');f()}
+function f(){let q=document.getElementById('q').value.toLowerCase();let l=jobs.filter(j=>{let matchCat=activeCat==='all'||j.cat.toLowerCase().includes(activeCat.toLowerCase())||j.type.toLowerCase().includes(activeCat.toLowerCase());let matchSearch=(j.title+j.desc+j.county+j.type).toLowerCase().includes(q);return matchCat&&matchSearch});document.getElementById('grid').innerHTML=l.map((j,i)=>`<div class="card ${i<2?'new':''}"><small>${j.type} • ${j.county}</small><h3>${j.title}</h3><p style="opacity:.9;font-size:14px;line-height:1.4">${j.desc}</p><a class="btn btn-g" href="${j.link}" target="_blank">Apply Now →</a></div>`).join('')||`<p style='text-align:center;grid-column:1/-1;opacity:.7'>No results for "${activeCat}"</p>`}
+f();
 </script></body></html>

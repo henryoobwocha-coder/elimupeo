@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elimupeo.co.ke/sitemap.xml

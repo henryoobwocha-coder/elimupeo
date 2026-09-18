@@ -6,7 +6,7 @@
 <style>:root{--g:#0a1f14;--l:#123722;--b:#00a651;--y:#f9d878}*{box-sizing:border-box}body{margin:0;font-family:Arial;background:var(--g);color:#fff}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;max-width:1100px;margin:auto}.nav img{height:46px;border-radius:10px;background:#fff;padding:2px}.hero{text-align:center;padding:20px}.btn{padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block}.btn-g{background:var(--b);color:#fff;padding:8px 14px;font-size:12px}.btn-y{background:var(--y);color:#000}.search{max-width:500px;margin:10px auto;display:block;width:90%;padding:14px;border-radius:10px;border:1px solid #2a5a3a;background:var(--l);color:#fff;text-align:center}.filters{max-width:1100px;margin:0 auto 10px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:0 20px}.filters button{padding:8px 14px;border-radius:20px;border:1px solid #2a5a3a;background:var(--l);color:#fff;cursor:pointer;font-size:13px}.filters button.active{background:var(--y);color:#000;font-weight:bold}.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:20px}.card{background:var(--l);border:1px solid #1e4a2e;border-radius:14px;padding:18px}.card.new{border:2px solid var(--y);background:#173d26}.ad{max-width:1100px;margin:10px auto;background:#0f2a1c;border:1px dashed #2a5a3a;border-radius:12px;padding:12px;text-align:center;color:#9ccfa8;font-size:13px}.found{max-width:1100px;margin:20px auto;background:linear-gradient(135deg,#123722,#0a1f14);border:1px solid var(--y);border-radius:16px;padding:20px;display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between;align-items:center}.footer{text-align:center;padding:30px;opacity:.7;font-size:12px;line-height:1.6}</style></head>
 <body>
 <div class="nav"><div style="display:flex;align-items:center;gap:10px"><img src="logo.jpg"><b>ELIMUPEO.co.ke</b></div><a class="btn btn-y" href="#foundation">Foundation ❤️</a></div>
-<div class="hero"><h1>Find Your Next <span style="color:var(--y)">Opportunity</span></h1><p style="color:var(--y)">✅ 16 Live Today - 17th Sept 2026 | Nyamira • All 47 Counties</p><input id="q" class="search" placeholder="🔍 Search Mombasa 3000, PSC 100, HELB..." oninput="f()"></div>
+<div class="hero"><h1>Find Your Next <span style="color:var(--y)">Opportunity</span></h1><p style="color:var(--y)">✅ 17 Live Today - 18th Sept 2026 | Nyamira • All 47 Counties</p><input id="q" class="search" placeholder="🔍 Search PSC 1000, Mombasa 3000, HELB..." oninput="f()"></div>
 <div class="filters">
 <button class="active" onclick="setFilter('all',this)">All</button>
 <button onclick="setFilter('Government',this)">Government</button>
@@ -16,17 +16,18 @@
 <button onclick="setFilter('International',this)">International</button>
 <button onclick="setFilter('Loan',this)">Loan</button>
 </div>
-<div class="ad">AD SPACE 1 - AdSense Auto Ads will appear here</div>
+<div class="ad">AD SPACE 1 - AdSense Auto Ads will appear here after approval</div>
 <div id="grid" class="grid"></div>
 <div class="ad">AD SPACE 2 - Affiliate here</div>
 <div id="foundation" class="found">
-<div><h2 style="margin:0;color:var(--y)">Elimupeo Foundation</h2><p style="max-width:500px;line-height:1.5">We verify jobs & scholarships for free to fight fake jobs in Kenya. Your support keeps us clean, no SMS scams.</p><p style="font-size:13px;opacity:.9">Email: info@elimupeo.co.ke | Website: https://elimupeo.co.ke</p></div>
+<div><h2 style="margin:0;color:var(--y)">Elimupeo Foundation</h2><p style="max-width:500px;line-height:1.5">We verify jobs & scholarships for free to fight fake jobs in Kenya. Your support keeps us clean, no SMS scams.</p><p style="font-size:13px;opacity:.9">Email: info@elimupeo.co.ke | https://elimupeo.co.ke</p></div>
 <div><a class="btn btn-y" href="https://wa.me/2547XXXXXXXX?text=Hi%20Elimupeo%20I%20want%20to%20support" target="_blank">Support Us ❤️</a></div>
 </div>
-<div class="footer">Base: Nyamira • © 2026 Elimupeo.co.ke | Foundation Reg: In Progress<br>We never charge for jobs. <br><a style="color:var(--y)" href="/robots.txt">robots.txt</a> | <a style="color:var(--y)" href="/sitemap.xml">sitemap.xml</a></div>
+<div class="footer">Base: Nyamira • © 2026 Elimupeo.co.ke | We never charge for jobs. <br><a style="color:var(--y)" href="/robots.txt">robots.txt</a> | <a style="color:var(--y)" href="/sitemap.xml">sitemap.xml</a></div>
 <script>
 let activeCat='all';
 const jobs=[
+{type:"NEW • PSC 1000 TODAY",cat:"Government",county:"All 47 - MyGov 15 Sept",title:"PSC 1,000 Paid Internship - Digital Literacy Programme Cohort 5",desc:"Ministry of Education. Posted to Sub-County schools to support e-learning & virtual learning. For: B.Ed ICT, BSc ICT, Diploma ICT / ICT Integration. Graduated 2022+. Apply on psckjobs.go.ke",link:"https://psckjobs.go.ke"},
 {type:"NEW • COUNTY 3000",cat:"County",county:"Mombasa - Deadline 22 Sept",title:"Mombasa County 3,000 Casual Workers",desc:"Flood Prevention & Drainage under Mombasa Yangu Programme.",link:"https://mombasa.go.ke/careers"},
 {type:"NEW • COUNTY 146",cat:"County",county:"Nyeri - Deadline 29 Sept",title:"Nyeri County 146 Jobs - Nurses & Others",desc:"Permanent & Pensionable. Hand delivery to County Board.",link:"https://nyeri.go.ke/vacancies"},
 {type:"NEW • PSC 100",cat:"Government",county:"Nationwide - PSC",title:"PSC 100 Foreign Service Cadet / Third Secretary",desc:"CSG 11 - Ksh 36,200-47,900. Degree in International Relations, Law, ICT, etc.",link:"https://www.publicservice.go.ke"},
@@ -39,6 +40,6 @@ const jobs=[
 {type:"International",cat:"International",county:"All 47",title:"DAAD Germany Scholarships",desc:"Masters for Kenyans in Germany.",link:"https://www.daad.or.ke"}
 ];
 function setFilter(cat,btn){activeCat=cat;document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');f()}
-function f(){let q=document.getElementById('q').value.toLowerCase();let l=jobs.filter(j=>{let matchCat=activeCat==='all'||j.cat.toLowerCase().includes(activeCat.toLowerCase())||j.type.toLowerCase().includes(activeCat.toLowerCase());let matchSearch=(j.title+j.desc+j.county+j.type).toLowerCase().includes(q);return matchCat&&matchSearch});document.getElementById('grid').innerHTML=l.map((j,i)=>`<div class="card ${i<5?'new':''}"><small>${j.type} • ${j.county}</small><h3>${j.title}</h3><p style="opacity:.9;font-size:14px;line-height:1.4">${j.desc}</p><a class="btn btn-g" href="${j.link}" target="_blank">Apply Now →</a></div>`).join('')||`<p style='text-align:center;grid-column:1/-1;opacity:.7'>No results</p>`}
+function f(){let q=document.getElementById('q').value.toLowerCase();let l=jobs.filter(j=>{let matchCat=activeCat==='all'||j.cat.toLowerCase().includes(activeCat.toLowerCase())||j.type.toLowerCase().includes(activeCat.toLowerCase());let matchSearch=(j.title+j.desc+j.county+j.type).toLowerCase().includes(q);return matchCat&&matchSearch});document.getElementById('grid').innerHTML=l.map((j,i)=>`<div class="card ${i<6?'new':''}"><small>${j.type} • ${j.county}</small><h3>${j.title}</h3><p style="opacity:.9;font-size:14px;line-height:1.4">${j.desc}</p><a class="btn btn-g" href="${j.link}" target="_blank">Apply Now →</a></div>`).join('')||`<p style='text-align:center;grid-column:1/-1;opacity:.7'>No results</p>`}
 f();
 </script></body></html>

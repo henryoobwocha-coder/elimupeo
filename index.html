@@ -2,76 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elimupeo Foundation - Verified Kenya Jobs 2026</title>
+<title>Elimupeo.co.ke - Kenya's #1 Opportunity Hub - 47 Counties</title>
 <meta name="google-adsense-account" content="ca-pub-9214522311371721">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9214522311371721" crossorigin="anonymous"></script>
 <style>
-body{font-family:Arial;margin:0;padding:10px;background:#f9f9f9}
-nav{background:#0a3d62;padding:12px;text-align:center;border-radius:6px}
-nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold}
-.card{border:2px solid green;padding:12px;margin:10px 0;border-radius:8px;background:white}
-.badge{background:green;color:white;padding:3px 8px;border-radius:4px;font-size:12px}
-.btn{background:blue;color:white;padding:8px 12px;text-decoration:none;border-radius:5px;display:inline-block;margin-top:8px;font-weight:bold}
+body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
+.topbar{background:#fde68a;color:#000;text-align:center;padding:8px;font-weight:bold;font-size:14px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;background:#06140e}
+.header b{font-size:18px}
+.header a{color:#fde68a;text-decoration:none;margin-left:15px;font-weight:bold}
+.hero{text-align:center;padding:30px 15px 15px}
+.hero h1{font-size:38px;line-height:1.1;margin:0}
+.hero h1 span{color:#fde68a}
+.hero p{color:#cbd5e1;margin-top:10px}
+.searchbox{margin:20px auto;max-width:500px;background:#123524;border:1px solid #2a5a3a;border-radius:14px;padding:12px;text-align:center;color:#8ca99a}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0}
+.filter{padding:10px 18px;border-radius:20px;border:1px solid #2a5a3a;background:#123524;color:white;cursor:pointer}
+.filter.active{background:#fde68a;color:black;font-weight:bold}
+.card{background:#143d2a;border:1.5px solid #d4b26a;border-radius:16px;padding:18px;margin:14px 12px}
+.card small{color:#a7c4b5;font-size:12px;letter-spacing:0.5px;text-transform:uppercase}
+.card h3{margin:10px 0 8px;font-size:18px;line-height:1.3}
+.card p{color:#d1d5db;font-size:14px;line-height:1.5}
+.btn{display:inline-block;background:#22c55e;color:white;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:10px}
+.closed{background:#1a2e22;border:1px dashed #d4b26a;border-radius:16px;padding:16px;margin:20px 12px}
+.closed p{color:#a7c4b5;font-size:13px}
+.footer{text-align:center;padding:20px;color:#8ca99a;font-size:12px}
 </style>
 </head>
 <body>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="donation.html">Donation</a>
-<a href="privacy.html">Privacy</a>
-<a href="ads.txt">ads.txt</a>
-</nav>
-
-<h1>🇰🇪 Elimupeo Foundation - Verified Jobs Only - 30 Sep 2026</h1>
-<p>Till 1734645 | KCB 1241193487 | Truth Only - Verified one by one | elimupeo.co.ke/ads.txt verified</p>
-
-<div id="live-jobs"></div>
-
-<div style="margin-top:30px;padding:15px;background:#f5f5f5;border-radius:8px">
-<h3>CLOSED / ARCHIVE (No jobs found - moved here for transparency)</h3>
-<p>❌ Safaricom - No jobs found 29 Sep - Screenshot verified - removed from LIVE</p>
-<p>❌ IEBC - No jobs found - removed</p>
-<p>❌ KPLC permanent - No vacancies now - hired 1,154 already - kplc.co.ke - closed</p>
-<p>❌ KenGen CEO - closed 8 Sep - archive</p>
-<p>❌ Co-op, Britam, SBM, Equity - Awaiting verification - not posted until official portal shows live</p>
+<div class="topbar">🇰🇪 Kenya's #1 Opportunity Hub - All 47 Counties</div>
+<div class="header">
+<b>ELIMUPEO.co.ke</b>
+<div><a href="index.html">Home</a><a href="donation.html">Donate</a></div>
 </div>
 
-<div style="text-align:center;margin-top:20px;background:white;padding:15px;border-radius:8px">
-<p>Elimupeo Foundation | elimupeo.co.ke | logo.jpg | sitemap.xml | robots.txt verified</p>
-<p>Every job verified one by one - No fake news</p>
+<div class="hero">
+<h1>Find Your Next<br><span>Opportunity</span> in<br>Kenya</h1>
+<p>Scholarships, attachments, jobs & grants -<br>Verified daily - 47 Counties</p>
+<div class="searchbox">🔍 Search e.g. Equity, Kisii, HELB...</div>
+<div class="filters">
+<span class="filter active" onclick="filterJobs('all')">All</span>
+<span class="filter" onclick="filterJobs('government')">Government</span>
+<span class="filter" onclick="filterJobs('international')">International</span>
+<span class="filter" onclick="filterJobs('foundations')">Foundations</span>
+<span class="filter" onclick="filterJobs('jobs')">Jobs</span>
+</div>
+</div>
+
+<div id="jobs"></div>
+
+<div class="closed">
+<h3 style="color:#fde68a;margin-top:0">📦 CLOSED ARCHIVE - Transparency</h3>
+<p>❌ Safaricom - No jobs found 29 Sep - removed from LIVE</p>
+<p>❌ IEBC - No jobs found - removed</p>
+<p>❌ KPLC permanent - No vacancies - hired 1,154 - closed</p>
+<p>❌ KenGen CEO - closed 8 Sep - archive</p>
+</div>
+
+<div class="footer">
+Till 1734645 | KCB Paybill 1241193487<br>
+elimupeo.co.ke | ads.txt verified | sitemap.xml | No fee ever<br>
+Every job verified one by one on official .go.ke portal
 </div>
 
 <script>
-const liveJobs=[
-{t:"🔥 TSC CEO / Secretary - 30 Oct 2026",c:"TSC - VERIFIED",co:"Salary 698,600",ti:"TSC Secretary CEO Ref TSC/CS/001/2026 - Reopened 29 Sep after High Court nullified - Deadline 30 Oct 5pm",d:"Salary 698,600 + 15k airtime + 50k leave + vehicle 3000cc + 31% gratuity + 10M inpatient + 30M mortgage 3% + 6M car loan. Apply recruitment.tsc.go.ke OR chairperson2026@tsc.go.ke OR TSC House Upper Hill. Chapter Six KRA HELB EACC DCI CRB.",l:"https://www.tsc.go.ke"},
-{t:"🔥 TSC 54,016 - 20k + 34k",c:"TSC - MASSIVE",co:"54,016 posts",ti:"TSC 20,000 Junior School + 34,016 Promotions - teachersonline.go.ke",d:"20k Post Primary Permanent: C2 39k-49k + House + Commuter 5k + Hardship 10.9k. Diploma C+ mean. Interns 25/50 marks advantage. 34k promotions: Senior Teacher II 13,490, Senior Master IV 5,956, Senior Teacher I 4,210. Portal teachersonline.go.ke",l:"https://www.teachersonline.go.ke"},
-{t:"PSC 851 - 13 Oct",c:"Government",co:"Public Service",ti:"PSC 851 Jobs - 22 Sep Gazette - Deadline 13 Oct 2026 5pm",d:"851 vacancies: AG 518 (Deputy Chief State Counsel 257 etc), Social Dev 146, HR 50, Petroleum, Mining, Maritime. Apply publicservice.go.ke + psckjobs.go.ke. NO fee.",l:"https://www.publicservice.go.ke"},
-{t:"PSC 125 NEW - 100 Foreign Service",c:"Government",co:"100 Cadet",ti:"PSC 125 NEW - 100 Foreign Service Cadet Third Secretary CSG11 - MyGov 22 Sep",d:"100 Foreign Service Cadet, 5 Hospitality Officer II, 20 Instructor III, Technical Univ Mombasa DVC, Kabarnet Univ Principal + Deputy Principals, NG-CDF Board Member. Apply publicservice.go.ke",l:"https://www.publicservice.go.ke"},
-{t:"KICD 17 - 9 Oct",c:"Government",co:"Permanent",ti:"KICD 17 Permanent & Pensionable - Deadline 9 Oct - kicd.ac.ke",d:"Kenya Institute Curriculum Development 17 posts senior management technical admin. MyGov 22 Sep. Apply virtual link kicd.ac.ke/careers",l:"https://www.kicd.ac.ke/careers/"},
-{t:"KMTC 89 - 30 Sep TODAY",c:"Health",co:"Closing Today",ti:"KMTC 89 Vacancies - recruit.kmtc.ac.ke - Deadline 30 Sep",d:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 5 Artisan III, 8 Lecturers Mortuary Science, 5 Senior Lecturer Pharmacy. Chapter Six after shortlist.",l:"https://recruit.kmtc.ac.ke/jobs"},
-{t:"KPC 50 Interns - Age <28",c:"Parastatal",co:"50 Interns",ti:"Kenya Pipeline 50 Internship - 1 Year - KPC PLC",d:"50 positions: 2 ICT, 2 Safety, 2 Finance, 2 Revenue, 2 Legal, 2 Corp Planning, 10 Electrical Diploma, 7 Mechanical, 4 Operations, 3 Civil. Kenyan <28yrs grad 2020+.",l:"https://www.kpc.co.ke/careers/"},
-{t:"KAA 282 - Airport",c:"Airport",co:"282 posts",ti:"Kenya Airports Authority 282 Posts - Verified September 2026",d:"87 Security Warden, 75 Firefighter, 30 Apron Controller, 21 Bird Scout, Manager Airport Ops, Engineer, Accountant, Airport Manager Malindi. kaa.go.ke",l:"https://www.kaa.go.ke/careers"},
-{t:"KMA 75 - Marine",c:"Marine",co:"75 posts",ti:"Kenya Maritime Authority 75 Posts - kma.go.ke Official",d:"11 Principal Ship Surveyor, 12 Ship Surveyors, 10 Trainee Ship Surveyor, 3 Marine Environment, 4 Search Rescue, Principal Legal Maritime Governance, Auditor Systems Forensic.",l:"https://kma.go.ke/available-job-vacancies/"},
-{t:"Bandari 28 - 29 Sep",c:"Marine",co:"Mombasa",ti:"Bandari Maritime Academy 28 Jobs - Deadline 29 Sep 5pm",d:"Senior Deputy Director, Principal Legal, Senior Security, ICT Officer I, Works Officer I, Student Welfare, Business Dev, Trainers Marine Eng Nautical. bandarimaritime.ac.ke",l:"https://bandarimaritime.ac.ke"},
-{t:"DLP 1000 Interns - 5 Oct",c:"Internship",co:"Ministry Education",ti:"Digital Literacy Programme 1000 ICT Interns Cohort 5 - Deadline 5 Oct",d:"Ministry Education State Dept Basic Education. Deploy to Sub-County schools. B.Ed ICT / BSc ICT / Diploma ICT grad 2022+. 12 months stipend. Support virtual learning.",l:"https://www.psckjobs.go.ke"},
-{t:"KEMRI + KenGen SRBS - 30 Sep",c:"Parastatal",co:"30 Sep 5pm",ti:"KEMRI Admin Interns Kisumu + KenGen SRBS Pensions Admin Assistant - Deadline 30 Sep",d:"KEMRI Admin Interns Kisumu Nutrition research, Lab Manager Thika, Grants Officer Nairobi. KenGen SRBS Pensions Admin Asst bachelor Insurance Business Actuarial 1yr exp forms.gle/eaNWNbP6N5JCtAzS8",l:"https://erecruitment.kemri.go.ke"},
-{t:"Universities 50+ - 28 Sep / 13 Oct",c:"University",co:"Bomet Kenyatta etc",ti:"Public Universities - Bomet VC, Kenyatta DVC Admin + Academic, Makueni Principal + Laikipia 10 + Maseno 23 + Zetech 5 + UoN",d:"PSC Universities deadline 13 Oct via psckjobs.go.ke + Laikipia Maseno Zetech deadline 28 Sep + UoN Technologist Physics Plant Science + KSTVET TVET colleges.",l:"https://www.publicservice.go.ke"},
-{t:"Kisumu County - 16 Oct",c:"County",co:"10+ posts",ti:"Kisumu County - City Manager R, Deputy City Manager Ops, Director HRM, Chief HR, Municipal Manager - Deadline 16 Oct 5pm",d:"Sealed envelope Kisumu County Public Service Board Okore Road Milimani. Foreign degree CUE authenticated. kisumu.go.ke",l:"https://kisumu.go.ke"},
-{t:"KCB Bank 5 + Trainee - 2 Oct",c:"Company",co:"Bank Verified",ti:"KCB Bank 5 Jobs + 24-Month Management Trainee - Deadline 2 Oct",d:"Senior Private Banking Manager 6607, Head Project Mgmt Investments 6612 deadline 2 Oct, Relationship Mgr Infrastructure Energy 6593, Direct Sales Rep Marsabit Wajir. Trainee 24 months CS IT Cyber Data Finance Law.",l:"https://kcbgroup.com/careers"},
-{t:"NGO UN - World Vision 30 Sep",c:"NGO",co:"Nairobi",ti:"World Vision Regional Supply Chain Specialist - Deadline 30 Sep + Red Cross + ICRC + UN 33",d:"World Vision Supply Chain CIPS 5yrs Nairobi. Red Cross Technical Lead Measles Rubella, Systems Auditor. ICRC Accountant Nairobi. UN careers.un.org 33 jobs Nairobi.",l:"https://wvi.org/jobs"}
+const allJobs=[
+{cat:"government",top:"GOVERNMENT • All 47",title:"Elimu Scholarship 2026 - Ministry of Education",desc:"Elimu Scholarship for vulnerable KCPE 2025 - All 47 counties - Apply via Ministry portal",link:"https://www.education.go.ke",badge:"Ministry"},
+{cat:"government",top:"Recruitment MyGov 22 Sept",title:"PSC 851 Biggest this month: 257 Deputy Chief State Counsel, 145 Principal State Counsel, 91 Chief State Counsel",desc:"Published 22 Sept. 257 Deputy Chief State Counsel, 145 Principal, 91 Chief, 146 Asst Director Social Dev, 50 HR, 19 Deputy Solicitor General, Mining, Environment, Cabinet Affairs. Apply: psckjobs.go.ke",link:"https://www.publicservice.go.ke"},
+{cat:"government",top:"GOVERNMENT • TSC 54,016",title:"TSC 54,016 - 20,000 Junior School + 34,016 Promotions + CEO",desc:"CEO Secretary Ref TSC/CS/001/2026 deadline 30 Oct 5pm - Salary 698k + mortgage 30M. 20k Junior School permanent C2 39k-49k + allowances. 34k promotions Senior Teacher II 13,490 etc. teachersonline.go.ke",link:"https://www.teachersonline.go.ke"},
+{cat:"government",top:"HOT - GOVERNMENT • All 47 - Deadline 5 Oct 2026",title:"PSC 1000 INTERNSHIP - DLP Cohort 5 - Ministry Education",desc:"1000 ICT interns deploy Sub-County schools support e-learning virtual learning. B.Ed ICT / BSc ICT / Diploma ICT grad 2022+. 12 months stipend.",link:"https://www.psckjobs.go.ke"},
+{cat:"government",top:"GOVERNMENT • Health - TODAY LAST DAY 30 Sep",title:"KMTC 89 - 30 Sep 2026 - Closing TODAY",desc:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 8 Lecturers Mortuary, 5 Senior Lecturer Pharmacy, ICT Assistant, Accountant II. recruit.kmtc.ac.ke",link:"https://recruit.kmtc.ac.ke/jobs"},
+{cat:"jobs",top:"🔥 TODAY LAST DAY - MOMBASA 3000 • Mombasa - Deadline TODAY 24 Sep 2026",title:"Mombasa County 3,000 Casual Workers - FINAL DAY TODAY",desc:"Last chance! Mombasa Yangu Programme Flood Prevention. 1500 Transport + 1500 Environment. 3 months. Youth/Women/PWDs encouraged. Apply online NOW before portal closes.",link:"https://mombasa.go.ke"},
+{cat:"jobs",top:"AIRPORT • 282 POSTS",title:"Kenya Airports Authority KAA 282 - Airport Jobs",desc:"87 Security Warden, 75 Firefighter, 30 Apron Controller, 21 Bird Scout, Manager Airport Ops, Engineer, Accountant. kaa.go.ke",link:"https://www.kaa.go.ke/careers"},
+{cat:"jobs",top:"MARINE • 75 POSTS",title:"Kenya Maritime Authority KMA 75 - Marine Jobs",desc:"11 Principal Ship Surveyor, 12 Ship Surveyors, 10 Trainee Ship Surveyor, 3 Marine Environment Officer, 4 Search Rescue. kma.go.ke",link:"https://kma.go.ke/available-job-vacancies/"},
+{cat:"jobs",top:"PARASTATAL • 50 POSTS Age <28",title:"Kenya Pipeline KPC 50 Internship - 1 Year",desc:"2 ICT, 2 Safety, 2 Finance, 2 Revenue, 2 Legal, 10 Electrical Diploma, 7 Mechanical, 4 Operations, 3 Civil. Kenyan <28yrs grad 2020+. kpc.co.ke",link:"https://www.kpc.co.ke/careers/"},
+{cat:"foundations",top:"BANK • 5 POSTS - Deadline 2 Oct",title:"KCB Bank 5 Jobs + 24-Month Trainee",desc:"Senior Private Banking Manager, Head Project Mgmt Investments deadline 2 Oct, Relationship Mgr Infrastructure, Direct Sales Rep. Trainee 24 months CS IT Finance Law. kcbgroup.com/careers",link:"https://kcbgroup.com/careers"},
+{cat:"government",top:"UNIVERSITY • 50+ POSTS",title:"Public Universities - Bomet VC, Kenyatta DVC, Laikipia 10, Maseno 23, Zetech 5, UoN",desc:"Bomet University VC, Kenyatta DVC Admin Finance + DVC Academic, Makueni Principal via PSC 13 Oct + Laikipia 10 + Maseno 23 + Zetech 5 deadline 28 Sep + UoN Technologist",link:"https://www.publicservice.go.ke"},
+{cat:"government",top:"COUNTY • Kisumu - Deadline 16 Oct",title:"Kisumu County - City Manager, Deputy City Manager, Director HRM",desc:"City Manager Job Group R, Deputy City Manager Ops Technical, Director HR Management, Chief HR Officer. Sealed envelope Okore Road Milimani before 16 Oct 5pm.",link:"https://kisumu.go.ke"},
+{cat:"international",top:"NGO • UN • Nairobi",title:"World Vision Supply Chain + Red Cross + ICRC + UN 33 Jobs",desc:"World Vision Regional Supply Chain Specialist deadline 30 Sep Nairobi. Red Cross Technical Lead Measles Rubella. ICRC Accountant. UN 33 jobs Nairobi careers.un.org",link:"https://wvi.org/jobs"},
+{cat:"government",top:"KICD • 17 Permanent - Deadline 9 Oct",title:"KICD 17 Permanent & Pensionable - Curriculum Development",desc:"Kenya Institute Curriculum Development 17 posts senior management technical admin. MyGov 22 Sep. kicd.ac.ke/careers",link:"https://www.kicd.ac.ke/careers/"}
 ];
 
-document.getElementById('live-jobs').innerHTML = liveJobs.map(j=>`
+function render(filter){
+const c=document.getElementById('jobs');
+const list=filter==='all'?allJobs:allJobs.filter(j=>j.cat===filter);
+c.innerHTML=list.map(j=>`
 <div class="card">
-<span class="badge">${j.c} | ${j.co}</span>
-<h3>${j.ti}</h3>
-<p><b>${j.t}</b></p>
-<p>${j.d}</p>
-<a class="btn" href="${j.l}" target="_blank">Apply Official Portal - ${j.l}</a>
+<small>${j.top}</small>
+<h3>${j.title}</h3>
+<p>${j.desc}</p>
+<a class="btn" href="${j.link}" target="_blank">Apply Now →</a>
 </div>
 `).join('');
+}
+function filterJobs(cat){
+document.querySelectorAll('.filter').forEach(f=>f.classList.remove('active'));
+event.target.classList.add('active');
+render(cat);
+}
+render('all');
 </script>
 </body>
 </html>

@@ -8,13 +8,15 @@
 <style>
 body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
 .topbar{background:#fde68a;color:#000;text-align:center;padding:8px;font-weight:bold;font-size:13px}
-.header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#06140e;flex-wrap:wrap;gap:10px}
-.logo-wrap{display:flex;align-items:center;gap:10px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#06140e;gap:10px}
+.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo-img{width:52px;height:52px;background:white;border-radius:10px;object-fit:contain;padding:3px}
 .logo-text b{font-size:18px;line-height:1}
 .logo-text span{color:#fde68a;font-size:12px;letter-spacing:2px;display:block}
-.nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:230px}
-.nav a{padding:8px 14px;border-radius:20px;border:1px solid #2a5a3a;background:#123524;color:white;text-decoration:none;font-size:13px}
+/* MENU ONE ROW - STRAIGHT LINE */
+.nav{display:flex;gap:6px;flex-wrap:nowrap;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{padding:8px 12px;border-radius:20px;border:1px solid #2a5a3a;background:#123524;color:white;text-decoration:none;font-size:12px;flex-shrink:0}
 .nav a.active{background:#fde68a;color:black;font-weight:bold;border-color:#fde68a}
 .hero{text-align:center;padding:22px 12px 10px}
 .hero h1{font-size:36px;line-height:1.1;margin:0}
@@ -29,6 +31,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
 .card h3{margin:8px 0;font-size:17px;line-height:1.3}
 .card p{color:#d1d5db;font-size:13px;line-height:1.5}
 .btn{display:inline-block;background:#22c55e;color:white;padding:9px 16px;border-radius:20px;text-decoration:none;font-weight:bold;margin-top:8px;font-size:13px}
+.adbox{background:#0f2e1f;border:1px dashed #2a5a3a;border-radius:16px;padding:10px;margin:14px 12px;text-align:center}
 .closed{background:#1a2e22;border:1px dashed #d4b26a;border-radius:16px;padding:14px;margin:18px 12px}
 .footer{text-align:center;padding:18px;color:#8ca99a;font-size:11px}
 </style>
@@ -62,37 +65,40 @@ body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
 </div>
 </div>
 
+<!-- ONE AD UNIT ONLY -->
+<div class="adbox">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9214522311371721"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 <div id="jobs"></div>
 
 <div class="closed">
 <h3 style="color:#fde68a;margin:0 0 8px">📦 CLOSED ARCHIVE - Transparency</h3>
 <p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ Mombasa County 3,000 - 24 Sep CLOSED</p>
 <p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ Safaricom - No jobs found 29 Sep</p>
-<p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ IEBC - No jobs found - removed</p>
-<p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ KPLC permanent - Hired 1,154 - closed</p>
-<p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ KenGen CEO - closed 8 Sep</p>
+<p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ IEBC, KPLC, KenGen CEO - Closed</p>
 </div>
 
-<div class="footer">ELIMUPEO FOUNDATION | Till 1734645 | KCB 1241193487 | logo.jpg | ads.txt | sitemap.xml | No fee ever | Verified one by one</div>
+<div class="footer">ELIMUPEO FOUNDATION | Till 1734645 | KCB 1241193487 | logo.jpg | ads.txt | No fee ever</div>
 
 <script>
 const allJobs=[
-{cat:"government",date:"2026-09-30",top:"🔥 LATEST TODAY - TSC - Deadline 30 Oct 2026",title:"TSC Secretary / CEO - Reopened 29 Sep - Salary 698,600 + 30M Mortgage",desc:"Reopened after Kiambu High Court nullified old process 17 Sep. Salary 698,600 + 15k airtime + 50k leave + vehicle 3000cc + 31% gratuity + 10M inpatient + 30M mortgage 3% + 6M car loan. Apply recruitment.tsc.go.ke / chairperson2026@tsc.go.ke / TSC House Upper Hill.",link:"https://www.tsc.go.ke"},
-{cat:"government",date:"2026-09-30",top:"🔥 LATEST - TSC 54,016 - MASSIVE",title:"TSC 54,016 - 20,000 Junior School + 34,016 Promotions - teachersonline.go.ke",desc:"20k Post Primary Permanent Pensionable C2 39k-49k + House 9.6k-16.5k + Commuter 5k + Hardship 10.9k. Diploma C+ mean. Interns advantage 25/50 marks. 34k promotions: Senior Teacher II 13,490, Senior Master IV 5,956, Senior Teacher I 4,210.",link:"https://www.teachersonline.go.ke"},
-{cat:"government",date:"2026-09-30",top:"TODAY LAST DAY - 30 Sep 2026 - KMTC 89",title:"KMTC 89 Vacancies - CLOSING TODAY - recruit.kmtc.ac.ke",desc:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 5 Artisan III, 8 Lecturers Mortuary Science, 5 Senior Lecturer Pharmacy, ICT Asst. No hard copy.",link:"https://recruit.kmtc.ac.ke/jobs"},
-{cat:"government",date:"2026-09-30",top:"TODAY LAST DAY - 30 Sep 5pm - KEMRI + KenGen SRBS",title:"KEMRI Admin Interns Kisumu + Lab Manager Thika + KenGen SRBS Pensions Assistant",desc:"KEMRI erecruitment.kemri.go.ke - Admin Interns Kisumu, Thika Lab Manager, Nairobi Grants Officer. KenGen SRBS Pensions Admin Asst Bachelor Insurance Business Actuarial 1yr pension admin.",link:"https://erecruitment.kemri.go.ke"},
-{cat:"government",date:"2026-09-22",top:"GOVERNMENT • MyGov 22 Sept - Deadline 13 Oct 2026",title:"PSC 851 Jobs - 257 Deputy Chief State Counsel, 145 Principal, 91 Chief",desc:"146 Asst Director Social Dev, 50 HR, 19 Deputy Solicitor General, Mining, Environment, Cabinet Affairs. Apply: psckjobs.go.ke + publicservice.go.ke - NO fee.",link:"https://www.publicservice.go.ke"},
-{cat:"government",date:"2026-09-22",top:"GOVERNMENT • MyGov 22 Sept - 125 NEW",title:"PSC 125 NEW - 100 Foreign Service Cadet Third Secretary CSG11",desc:"100 Foreign Service Cadet, 5 Hospitality Officer II, 20 Instructor III, Technical Univ Mombasa DVC Admin Finance, Kabarnet University College Principal + 2 DVCs.",link:"https://www.publicservice.go.ke"},
-{cat:"government",date:"2026-09-22",top:"GOVERNMENT • KICD 17 - Deadline 9 Oct",title:"KICD 17 Permanent & Pensionable - Curriculum Development",desc:"Kenya Institute Curriculum Development 17 posts senior management technical admin. MyGov 22 Sep. kicd.ac.ke/careers",link:"https://www.kicd.ac.ke/careers/"},
-{cat:"government",date:"2026-09-20",top:"GOVERNMENT • 1000 Interns - Deadline 5 Oct",title:"DLP 1000 ICT Interns Cohort 5 - Ministry Education",desc:"Ministry Education State Dept Basic Education. Deploy to Sub-County schools support e-learning virtual learning. B.Ed ICT / BSc ICT / Diploma ICT grad 2022+. 12 months stipend.",link:"https://www.psckjobs.go.ke"},
-{cat:"jobs",date:"2026-09-29",top:"MARINE • Bandari 28 - 29 Sep 5pm",title:"Bandari Maritime Academy 28 Jobs - Mombasa",desc:"Senior Deputy Director Maritime Education, Corporation Secretary, ICT Officer I, Works Officer I, Student Welfare, Trainers Marine Eng Nautical Science. bandarimaritime.ac.ke",link:"https://bandarimaritime.ac.ke"},
-{cat:"jobs",date:"2026-09-28",top:"AIRPORT • KAA 282 - Verified Sept 2026",title:"Kenya Airports Authority 282 Posts - 87 Security Warden, 75 Firefighter",desc:"30 Apron Controller, 21 Bird Scout, Manager Airport Ops 2, Airport Engineer, Mechanical Eng 2, Accountant, Airport Manager Malindi. kaa.go.ke",link:"https://www.kaa.go.ke/careers"},
-{cat:"jobs",date:"2026-09-28",top:"MARINE • KMA 75 - Official",title:"Kenya Maritime Authority 75 Posts - Ship Surveyors",desc:"11 Principal Ship Surveyor, 12 Ship Surveyors, 10 Trainee Ship Surveyor, 3 Marine Environment, 4 Search Rescue, Legal Maritime Governance. kma.go.ke",link:"https://kma.go.ke/available-job-vacancies/"},
-{cat:"jobs",date:"2026-09-18",top:"PARASTATAL • KPC 50 - Age <28",title:"Kenya Pipeline Company 50 Internship - 1 Year",desc:"2 ICT, 2 Safety, 2 Finance, 2 Revenue, 2 Legal, 10 Electrical Diploma, 7 Mechanical, 4 Operations, 3 Civil. Kenyan <28yrs grad 2020+. kpc.co.ke",link:"https://www.kpc.co.ke/careers/"},
-{cat:"foundations",date:"2026-09-18",top:"BANK • KCB 5 - Deadline 2 Oct",title:"KCB Bank 5 Jobs + 24-Month Management Trainee",desc:"Senior Private Banking Manager, Head Project Mgmt Investments deadline 2 Oct, Relationship Mgr Infrastructure Energy, Direct Sales Rep. kcbgroup.com/careers",link:"https://kcbgroup.com/careers"},
-{cat:"government",date:"2026-09-15",top:"UNIVERSITY • 50+ Posts - 13 Oct / 28 Sep",title:"Public Universities - Bomet VC, Kenyatta DVC Admin + Academic",desc:"Bomet University VC, Kenyatta DVC Admin Finance + DVC Academic, Makueni Principal via PSC 13 Oct. Laikipia 10, Maseno 23, Zetech 5, UoN Technologist.",link:"https://www.publicservice.go.ke"},
-{cat:"government",date:"2026-09-12",top:"COUNTY • Kisumu - 16 Oct 5pm",title:"Kisumu County - City Manager R, Deputy City Manager Ops, Director HRM",desc:"City Manager Job Group R, Deputy City Manager Ops Technical, Director HR Management, Chief HR Officer, Municipal Manager. Sealed envelope Okore Road Milimani.",link:"https://kisumu.go.ke"},
-{cat:"international",date:"2026-09-10",top:"NGO • UN • Nairobi - 30 Sep",title:"World Vision Regional Supply Chain + Red Cross + ICRC + UN 33",desc:"World Vision CIPS 5+ years Nairobi deadline 30 Sep. Red Cross Technical Lead Measles Rubella, Systems Auditor. ICRC Accountant. UN careers.un.org",link:"https://wvi.org/jobs"}
+{cat:"government",date:"2026-10-01",top:"🔥 NEW AUTHENTIC - TSC CEO - Deadline 30 Oct 2026",title:"TSC Secretary / CEO - Reopened 29 Sep - Salary 698,600 + 30M Mortgage",desc:"Reopened after Kiambu High Court nullified old process. Salary 698,600 + 15k airtime + 50k leave + vehicle 3000cc + 31% gratuity + 10M inpatient + 30M mortgage 3% + 6M car loan. recruitment.tsc.go.ke / chairperson2026@tsc.go.ke",link:"https://www.tsc.go.ke"},
+{cat:"government",date:"2026-10-01",top:"🔥 NEW AUTHENTIC - TSC 54,016 - teachersonline.go.ke",title:"TSC 54,016 - 20,000 Junior School + 34,016 Promotions",desc:"20k Post Primary Permanent C2 39k-49k + House + Commuter 5k + Hardship 10.9k. Diploma C+ mean. Interns 25/50 advantage. 34k promotions: Senior Teacher II 13,490, Senior Master IV 5,956.",link:"https://www.teachersonline.go.ke"},
+{cat:"government",date:"2026-09-30",top:"NEW AUTHENTIC - 30 Sep TODAY - KMTC 89",title:"KMTC 89 Vacancies - CLOSING TODAY - recruit.kmtc.ac.ke",desc:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 8 Lecturers Mortuary Science, 5 Senior Lecturer Pharmacy. Chapter Six after shortlist.",link:"https://recruit.kmtc.ac.ke/jobs"},
+{cat:"government",date:"2026-09-30",top:"NEW AUTHENTIC - KEMRI + KenGen SRBS - 30 Sep 5pm",title:"KEMRI Admin Interns Kisumu + Lab Manager Thika + KenGen SRBS Pensions Asst",desc:"KEMRI erecruitment.kemri.go.ke - Admin Interns Kisumu Nutrition, Thika Lab Manager, Nairobi Grants Officer. KenGen SRBS Pensions Admin Asst.",link:"https://erecruitment.kemri.go.ke"},
+{cat:"government",date:"2026-09-22",top:"GOVERNMENT • MyGov 22 Sept - 13 Oct",title:"PSC 851 Jobs - 257 Deputy Chief State Counsel, 145 Principal",desc:"91 Chief State Counsel, 146 Asst Director Social Dev, 50 HR, 19 Deputy Solicitor General. psckjobs.go.ke + publicservice.go.ke",link:"https://www.publicservice.go.ke"},
+{cat:"government",date:"2026-09-22",top:"GOVERNMENT • 125 NEW - 100 Foreign Service Cadet",title:"PSC 125 - 100 Foreign Service Cadet Third Secretary + Hospitality",desc:"100 Foreign Service Cadet CSG11, 5 Hospitality Officer II, 20 Instructor III, TUM DVC, Kabarnet Principal + 2 DVCs.",link:"https://www.publicservice.go.ke"},
+{cat:"jobs",date:"2026-09-28",top:"AIRPORT • KAA 282 - Verified",title:"Kenya Airports Authority 282 - 87 Security Warden, 75 Firefighter",desc:"30 Apron Controller, 21 Bird Scout, Manager Airport Ops, Airport Engineer. kaa.go.ke",link:"https://www.kaa.go.ke/careers"},
+{cat:"jobs",date:"2026-09-28",top:"MARINE • KMA 75 - Official kma.go.ke",title:"Kenya Maritime Authority 75 - Ship Surveyors, Marine Officers",desc:"11 Principal Ship Surveyor, 12 Ship Surveyors, 10 Trainee, Marine Environment, Search Rescue.",link:"https://kma.go.ke/available-job-vacancies/"},
+{cat:"government",date:"2026-09-20",top:"GOVERNMENT • 1000 Interns - 5 Oct",title:"DLP 1000 ICT Interns Cohort 5 - Ministry Education",desc:"Deploy to Sub-County schools support e-learning. B.Ed ICT / BSc ICT / Diploma ICT grad 2022+. 12 months.",link:"https://www.psckjobs.go.ke"},
+{cat:"jobs",date:"2026-09-18",top:"PARASTATAL • KPC 50 - Age <28",title:"Kenya Pipeline Company 50 Internship",desc:"2 ICT, 2 Safety, 2 Finance, 10 Electrical Diploma, 7 Mechanical, 4 Operations. Kenyan <28yrs grad 2020+.",link:"https://www.kpc.co.ke/careers/"}
 ];
 function render(cat){
 let list=cat==='all'?allJobs:allJobs.filter(j=>j.cat===cat);

@@ -38,7 +38,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
 </style>
 </head>
 <body>
-<div class="topbar">🇰🇪 100% Genuine Verified - All 47 Counties - Updated Today</div>
+<div class="topbar">🇰🇪 100% Genuine Verified - All 47 Counties - Updated Today - Elimupeo Foundation</div>
 <div class="header">
 <div class="logo-wrap">
 <img src="logo.jpg" class="logo-img" alt="Elimupeo logo">
@@ -58,52 +58,78 @@ body{margin:0;font-family:Arial,sans-serif;background:#06140e;color:white}
 <p>Scholarships, attachments, jobs & grants -<br>Verified daily - Apply Today - 47 Counties</p>
 <div class="searchbox">🔍 Search e.g. Equity, Kisii, HELB, Postgraduate...</div>
 <div class="filters">
-<span class="filter active" onclick="filterJobs('all')">All</span>
+<span class="filter active" onclick="filterJobs('all')">All 30</span>
 <span class="filter" onclick="filterJobs('government')">Government</span>
+<span class="filter" onclick="filterJobs('county')">County</span>
 <span class="filter" onclick="filterJobs('scholarship')">Scholarships</span>
 <span class="filter" onclick="filterJobs('international')">International</span>
-<span class="filter" onclick="filterJobs('jobs')">Jobs</span>
+<span class="filter" onclick="filterJobs('private')">Private</span>
+<span class="filter" onclick="filterJobs('ngo')">NGOs</span>
+<span class="filter" onclick="filterJobs('jobs')">Parastatal</span>
 </div>
 </div>
 
 <div class="adbox">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9214522311371721"
-     data-ad-slot="1234567890"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9214522311371721" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <div id="jobs"></div>
 
 <div class="closed">
-<h3 style="color:#fde68a;margin:0 0 8px">📦 CLOSED ARCHIVE - Transparency</h3>
+<h3 style="color:#fde68a;margin:0 0 8px">📦 CLOSED ARCHIVE - Transparency by Sir Henry</h3>
 <p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ Mombasa County 3,000 - 24 Sep CLOSED</p>
 <p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ Safaricom - No jobs found 29 Sep</p>
 <p style="margin:4px 0;color:#a7c4b5;font-size:12px">❌ IEBC, KPLC, KenGen CEO - Closed</p>
 </div>
 
-<div class="footer">ELIMUPEO FOUNDATION | Till 1734645 | KCB 1241193487 | 100% Genuine Verified Jobs in Kenya | Apply Today</div>
+<div class="footer">ELIMUPEO FOUNDATION | Founder: Sir Henry | Till 1734645 | KCB 1241193487 | 100% Genuine Verified</div>
 
 <script>
 const allJobs=[
-{cat:"government",date:"2026-10-02",top:"🔥 NEW - 2 Oct - Ministry of Health",title:"Ministry of Health - 50 Internship Posts - PSC Portal",desc:"50 Ministry of Health interns under PSC internship program. Degree/Diploma in Health records, Nursing, Clinical Medicine. Apply via psckjobs.go.ke - Deadline 15 Oct 2026. No fee.",link:"https://psckjobs.go.ke"},
-{cat:"government",date:"2026-10-02",top:"🔥 NEW - 2 Oct - KRA",title:"Kenya Revenue Authority - Revenue Officers & Graduate Trainees",desc:"KRA recruiting Revenue Officers, Customs Officers. Degree in Business, Economics, Law. Apply kra.go.ke/careers. Chapter Six after shortlist. Verified today.",link:"https://www.kra.go.ke/careers"},
-{cat:"government",date:"2026-10-02",top:"🔥 NEW - 2 Oct - Uasin Gishu County",title:"County Government of Uasin Gishu - 30 ECDE Teachers",desc:"30 ECDE Teachers across Eldoret, Turbo, Moiben. Diploma ECDE + TSC registration. Apply: uasingishu.go.ke/vacancies - Deadline 10 Oct.",link:"https://uasingishu.go.ke"},
-{cat:"government",date:"2026-10-01",top:"🔥 NEW AUTHENTIC - TSC CEO - Deadline 30 Oct 2026",title:"TSC Secretary / CEO - Reopened 29 Sep - Salary 698,600 + 30M Mortgage",desc:"Reopened after Kiambu High Court nullified old process. Salary 698,600 + 15k airtime + 50k leave + vehicle 3000cc + 31% gratuity + 10M inpatient + 30M mortgage 3% + 6M car loan. recruitment.tsc.go.ke",link:"https://www.tsc.go.ke"},
-{cat:"government",date:"2026-10-01",top:"🔥 NEW AUTHENTIC - TSC 54,016 - teachersonline.go.ke",title:"TSC 54,016 - 20,000 Junior School + 34,016 Promotions",desc:"20k Post Primary Permanent C2 39k-49k + House + Commuter 5k + Hardship 10.9k. Diploma C+ mean. Interns 25/50 advantage. 34k promotions.",link:"https://www.teachersonline.go.ke"},
-{cat:"scholarship",date:"2026-10-02",top:"🎓 POSTGRADUATE SCHOLARSHIP - DAAD",title:"DAAD Kenya Postgraduate Scholarship 2026 - Masters & PhD Germany",desc:"Full scholarship Masters & PhD in Germany for Kenyans. Covers tuition, 934 Euro monthly, travel, insurance. Degree 2nd upper min. Apply daad.or.ke - Deadline Nov 2026.",link:"https://www.daad.or.ke"},
-{cat:"scholarship",date:"2026-10-02",top:"🎓 POSTGRADUATE SCHOLARSHIP - Mastercard USIU",title:"Mastercard Foundation Scholars Program at USIU-Africa - Full Masters 2026",desc:"Full Masters scholarship at USIU-Africa for youth. Covers tuition, accommodation, books, stipend. For financially needy with leadership. Apply usiu.ac.ke/mastercard",link:"https://www.usiu.ac.ke"},
-{cat:"government",date:"2026-09-30",top:"NEW AUTHENTIC - 30 Sep - KMTC 89",title:"KMTC 89 Vacancies - recruit.kmtc.ac.ke",desc:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 8 Lecturers Mortuary Science, 5 Senior Lecturer Pharmacy. Chapter Six after shortlist.",link:"https://recruit.kmtc.ac.ke/jobs"},
-{cat:"government",date:"2026-09-30",top:"NEW AUTHENTIC - KEMRI + KenGen SRBS",title:"KEMRI Admin Interns Kisumu + Lab Manager Thika + KenGen SRBS",desc:"KEMRI erecruitment.kemri.go.ke - Admin Interns Kisumu Nutrition, Thika Lab Manager, Nairobi Grants Officer. KenGen SRBS Pensions Admin Asst.",link:"https://erecruitment.kemri.go.ke"},
-{cat:"government",date:"2026-09-22",top:"GOVERNMENT • MyGov 22 Sept - 13 Oct",title:"PSC 851 Jobs - 257 Deputy Chief State Counsel, 145 Principal",desc:"91 Chief State Counsel, 146 Asst Director Social Dev, 50 HR, 19 Deputy Solicitor General. psckjobs.go.ke + publicservice.go.ke",link:"https://www.publicservice.go.ke"},
-{cat:"government",date:"2026-09-22",top:"GOVERNMENT • 125 NEW - 100 Foreign Service Cadet",title:"PSC 125 - 100 Foreign Service Cadet Third Secretary + Hospitality",desc:"100 Foreign Service Cadet CSG11, 5 Hospitality Officer II, 20 Instructor III, TUM DVC, Kabarnet Principal + 2 DVCs.",link:"https://www.publicservice.go.ke"},
-{cat:"jobs",date:"2026-09-28",top:"AIRPORT • KAA 282 - Verified",title:"Kenya Airports Authority 282 - 87 Security Warden, 75 Firefighter",desc:"30 Apron Controller, 21 Bird Scout, Manager Airport Ops, Airport Engineer. kaa.go.ke",link:"https://www.kaa.go.ke/careers"},
-{cat:"jobs",date:"2026-09-28",top:"MARINE • KMA 75 - Official kma.go.ke",title:"Kenya Maritime Authority 75 - Ship Surveyors, Marine Officers",desc:"11 Principal Ship Surveyor, 12 Ship Surveyors, 10 Trainee, Marine Environment, Search Rescue.",link:"https://kma.go.ke/available-job-vacancies/"},
-{cat:"government",date:"2026-09-20",top:"GOVERNMENT • 1000 Interns - 5 Oct",title:"DLP 1000 ICT Interns Cohort 5 - Ministry Education",desc:"Deploy to Sub-County schools support e-learning. B.Ed ICT / BSc ICT / Diploma ICT grad 2022+. 12 months.",link:"https://www.psckjobs.go.ke"},
-{cat:"jobs",date:"2026-09-18",top:"PARASTATAL • KPC 50 - Age <28",title:"Kenya Pipeline Company 50 Internship",desc:"2 ICT, 2 Safety, 2 Finance, 10 Electrical Diploma, 7 Mechanical, 4 Operations. Kenyan <28yrs grad 2020+.",link:"https://www.kpc.co.ke/careers/"}
+// GOVERNMENT - 8 Jobs
+{cat:"government",date:"2026-10-02",top:"🔥 GOVERNMENT • 2 Oct • Ministry of Health",title:"Ministry of Health - 50 Internship Posts - PSC Portal",desc:"50 MoH interns under PSC. Degree/Diploma Health Records, Nursing, Clinical Medicine. Apply via psckjobs.go.ke - Deadline 15 Oct 2026. No fee. Verified: psckjobs.go.ke",link:"https://psckjobs.go.ke"},
+{cat:"government",date:"2026-10-02",top:"🔥 GOVERNMENT • 2 Oct • KRA",title:"Kenya Revenue Authority - Revenue & Customs Officers",desc:"KRA recruiting Officers. Degree Business, Econ, Law. Apply kra.go.ke/careers. Chapter Six after shortlist only. Verified today.",link:"https://www.kra.go.ke/careers"},
+{cat:"government",date:"2026-10-01",top:"🔥 GOVERNMENT • TSC CEO • 30 Oct 2026",title:"TSC Secretary / CEO - Reopened 29 Sep - 698,600 + 30M Mortgage",desc:"TSC CEO reopened after High Court nullification. Salary 698,600 + airtime 15k + vehicle 3000cc + gratuity 31% + mortgage 30M at 3%. recruitment.tsc.go.ke - Official",link:"https://www.tsc.go.ke"},
+{cat:"government",date:"2026-10-01",top:"🔥 GOVERNMENT • TSC 54,016 Teachers",title:"TSC 54,016 - 20,000 Junior + 34,016 Promotions",desc:"20k Permanent C2 39k-49k + House + Commuter 5k + Hardship 10.9k. Diploma C+ mean. Interns 25/50 marks advantage. teachersonline.go.ke",link:"https://www.teachersonline.go.ke"},
+{cat:"government",date:"2026-09-30",top:"GOVERNMENT • KMTC 89 Vacancies",title:"KMTC 89 Vacancies - recruit.kmtc.ac.ke",desc:"10 Office Asst III, 10 Security Warden II, 10 Driver III, 10 Clerical III, 8 Lecturers Mortuary Science, 5 Senior Lecturer Pharmacy. Official portal.",link:"https://recruit.kmtc.ac.ke/jobs"},
+{cat:"government",date:"2026-09-30",top:"GOVERNMENT • KEMRI Interns + Jobs",title:"KEMRI Admin Interns Kisumu + Lab Manager Thika",desc:"KEMRI erecruitment.kemri.go.ke - Admin Interns Nutrition Kisumu, Lab Manager Thika, Grants Officer Nairobi. Free application.",link:"https://erecruitment.kemri.go.ke"},
+{cat:"government",date:"2026-09-22",top:"GOVERNMENT • PSC 851 Jobs • 13 Oct",title:"PSC 851 Jobs - 257 Deputy Chief State Counsel, 145 Principal",desc:"91 Chief State Counsel, 146 Asst Director Social Dev, 50 HR, 19 Deputy Solicitor General. Official: psckjobs.go.ke + publicservice.go.ke",link:"https://www.publicservice.go.ke"},
+{cat:"government",date:"2026-10-01",top:"GOVERNMENT • KISE 23 Jobs • 14 Oct",title:"Kenya Institute of Special Education - 23 Vacancies",desc:"KISE recruiting 23 posts - Assistant Directors, Principal Officers, Therapists, Counsellors. Apply recruitment.kise.ac.ke - Deadline 14 Oct. Free.",link:"https://recruitment.kise.ac.ke"},
+
+// COUNTY - 6 Jobs
+{cat:"county",date:"2026-10-02",top:"COUNTY • Uasin Gishu 30 ECDE",title:"Uasin Gishu County - 30 ECDE Teachers",desc:"30 ECDE Teachers Eldoret, Turbo, Moiben. Diploma ECDE + TSC registration. Apply: uasingishu.go.ke/vacancies - Deadline 10 Oct 2026.",link:"https://uasingishu.go.ke"},
+{cat:"county",date:"2026-10-01",top:"COUNTY • Machakos 100 Support Staff",title:"Machakos County - 100 Support Staff II + Health Officers",desc:"100 Support Staff Job Group B, Physiotherapist III, Health Records. Permanent & Pensionable. machakos.go.ke - Deadline 12 Oct.",link:"https://machakos.go.ke"},
+{cat:"county",date:"2026-10-01",top:"COUNTY • Murang'a 24 Internship",title:"Murang'a County - 24 Internship & Job Vacancies",desc:"24 Interns & Officers across departments. Degree/Diploma. muranga.go.ke - 1 Oct Advertised.",link:"https://www.muranga.go.ke"},
+{cat:"county",date:"2026-10-01",top:"COUNTY • Busia County • Tug of War Coach",title:"Busia County Public Service Board - Tug of War Coach",desc:"Busia County hiring Tug of War Coach + other sports roles. Apply busiacounty.go.ke - New 1 Oct.",link:"https://busiacounty.go.ke"},
+{cat:"county",date:"2026-09-30",top:"COUNTY • Nyamira 183 Health Jobs",title:"Nyamira County - 183 Health & Support Staff",desc:"183 posts - Nurses, Clinical Officers, Lab Techs, Support Staff. nyamira.go.ke - PSC aligned terms.",link:"https://nyamira.go.ke"},
+{cat:"county",date:"2026-09-28",top:"COUNTY • Nairobi City County",title:"Nairobi City County - 50 Enforcement & Revenue Clerks",desc:"50 positions - Enforcement Officers, Revenue Clerks, Environment Officers. nairobicity.go.ke - Deadline 15 Oct.",link:"https://nairobicity.go.ke"},
+
+// SCHOLARSHIP - 7 Jobs - with % included
+{cat:"scholarship",date:"2026-10-02",top:"🎓 SCHOLARSHIP • 80% • UNICAF",title:"UNICAF - 100 Scholarships for Women Leaders - Up to 80% OFF",desc:"Women Equality Day Campaign. Bachelor's, Master's, PhD 100% online. COVERAGE: Up to 80% tuition scholarship (partial, remaining fees apply). Official: unicaf.org & apply.unicaf.org. Verified genuine.",link:"https://www.unicaf.org"},
+{cat:"scholarship",date:"2026-10-02",top:"🎓 SCHOLARSHIP • 100% FULL • DAAD Germany",title:"DAAD Postgraduate Scholarship 2026 - Masters & PhD - 100% FULL",desc:"COVERAGE: 100% FULL - Tuition + €934-€1,300 monthly + travel + insurance. For Kenyans 2nd Upper min. Official: daad.or.ke - Deadline Nov 2026.",link:"https://www.daad.or.ke"},
+{cat:"scholarship",date:"2026-10-02",top:"🎓 SCHOLARSHIP • 100% FULL • Mastercard USIU",title:"Mastercard Foundation at USIU-Africa - Full Masters 2026 - 100% FULL",desc:"COVERAGE: 100% FULL - Tuition + accommodation + books + stipend + laptop. For financially needy youth leaders. Official: usiu.ac.ke/mastercard",link:"https://www.usiu.ac.ke"},
+{cat:"scholarship",date:"2026-10-01",top:"🎓 SCHOLARSHIP • 100% FULL • MMoCRA 56 Slots",title:"MMoCRA EU-Africa - 44 Masters + 12 PhD - 100% FULL - Africans Only",desc:"COVERAGE: 100% FULL - Tuition + €890 Masters / €1,230 PhD monthly + flight + insurance. Official: mmocra.com - Deadline 20 Sept 2026. EU funded.",link:"https://www.mmocra.com"},
+{cat:"scholarship",date:"2026-10-01",top:"🎓 SCHOLARSHIP • 30%-70% • HELB + Universities Fund",title:"Kenya Govt Scholarship 2026/27 - Universities Fund - 30% to 70%",desc:"COVERAGE: 30% to 70% tuition based on Means Testing (Band 1 = 70% scholarship + 25% loan, Band 5 = 30% + 30% loan). Official: hef.co.ke - Apply via HEF portal.",link:"https://www.hef.co.ke"},
+{cat:"scholarship",date:"2026-10-01",top:"🎓 SCHOLARSHIP • 100% FULL • Elimu + Wings to Fly",title:"Elimu Scholarship (World Bank + Equity) - 100% FULL Secondary",desc:"COVERAGE: 100% FULL - Tuition + uniform + books + mentorship for 4 years secondary. For needy KCPE. Official: equitygroupfoundation.com",link:"https://equitygroupfoundation.com"},
+{cat:"scholarship",date:"2026-10-01",top:"🎓 INTERNATIONAL • 100% FULL • Erasmus Mundus",title:"Erasmus Mundus Joint Masters Europe - 100% FULL + €1,400 Monthly",desc:"COVERAGE: 100% FULL - Tuition + €1,000-€1,400 monthly + travel + visa. Study in 2-4 EU countries. Official: eacea.ec.europa.eu",link:"https://www.eacea.ec.europa.eu"},
+
+// INTERNATIONAL - 2 Jobs
+{cat:"international",date:"2026-10-02",top:"🌍 INTERNATIONAL • Kenya Embassy US 13 Jobs",title:"Kenya Embassy Washington DC - 13 Vacancies - Drivers, Clerks",desc:"13 posts Washington DC - 4 Drivers, 3 Clerks, 3 Consular Assistants. US citizens/Green Card/Work Auth. Deadline 12 Oct 2026. Official embassy advert.",link:"https://kenyaembassydc.org"},
+{cat:"international",date:"2026-10-01",top:"🌍 INTERNATIONAL • Türkiye Burslari 100% FULL",title:"Türkiye Burslari Scholarship Turkey - Bachelors, Masters, PhD 100% FULL",desc:"COVERAGE: 100% FULL - Tuition + flight + accommodation + Turkish language + stipend. Official: turkiyeburslari.gov.tr - Apply free.",link:"https://www.turkiyeburslari.gov.tr"},
+
+// PRIVATE - 3 Jobs
+{cat:"private",date:"2026-10-02",top:"💼 PRIVATE • Safaricom Graduate Trainee",title:"Safaricom PLC - Graduate Management Trainee 2026",desc:"Safaricom hiring Graduate Trainees - Technology, Commercial, M-Pesa. Degree 2023-2025. Apply safaricom.co.ke/careers - No fee.",link:"https://www.safaricom.co.ke/careers"},
+{cat:"private",date:"2026-10-02",top:"💼 PRIVATE • KCB Bank 20 Graduate",title:"KCB Bank Kenya - 20 Graduate Trainees & Relationship Officers",desc:"KCB Group hiring - Graduate Trainees, Relationship Officers, Credit Analysts. Degree Business, Finance. kcbgroup.com/careers",link:"https://kcbgroup.com/careers"},
+{cat:"private",date:"2026-10-01",top:"💼 PRIVATE • Equity Bank",title:"Equity Bank Kenya - Wings to Fly Mentors + Bank Officers",desc:"Equity hiring Mentors, Branch Officers, IT Support. Apply equitybank.co.ke/careers - Official portal.",link:"https://equitybank.co.ke"},
+
+// NGO - 2 Jobs
+{cat:"ngo",date:"2026-10-02",top:"🤝 NGO • UNHCR 10 Positions",title:"UNHCR Kenya - 10 Positions - Kakuma, Dadaab, Nairobi",desc:"UNHCR hiring Protection Officers, Field Associates, Admin. Apply unhcr.org/careers - UN official site. Free.",link:"https://www.unhcr.org/careers"},
+{cat:"ngo",date:"2026-10-01",top:"🤝 NGO • Amref Health Africa 15 Jobs",title:"Amref Health Africa - 15 Vacancies - Health & Admin",desc:"Amref hiring Project Officers, Nurses, M&E, Finance. amref.org/careers - Deadline 15 Oct. No fee.",link:"https://amref.org/careers"},
+
+// PARASTATAL - 2 Jobs
+{cat:"jobs",date:"2026-09-28",top:"✈️ PARASTATAL • KAA 282 Verified",title:"Kenya Airports Authority 282 - 87 Security Warden, 75 Firefighter",desc:"30 Apron Controller, 21 Bird Scout, Manager Airport Ops, Engineer. Official: kaa.go.ke/careers - Verified.",link:"https://www.kaa.go.ke/careers"},
+{cat:"jobs",date:"2026-09-18",top:"🛢️ PARASTATAL • KPC 50 Internship Age <28",title:"Kenya Pipeline Company 50 Internship",desc:"2 ICT, 2 Safety, 2 Finance, 10 Electrical Diploma, 7 Mechanical. Kenyan <28yrs grad 2020+. kpc.co.ke/careers",link:"https://www.kpc.co.ke/careers/"}
 ];
 function render(cat){
 let list=cat==='all'?allJobs:allJobs.filter(j=>j.cat===cat);
